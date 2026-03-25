@@ -35,14 +35,14 @@ const AdmissionPage = () => {
   return (
     <div className="flex flex-col">
       <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
-        <div className="absolute inset-0 bg-linear-to-b from-emerald-50/50 to-white dark:from-emerald-950/20 -z-10"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-sky-50/50 to-white dark:from-sky-950/20 -z-10"></div>
         <div className="container mx-auto px-6 text-center">
            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
               <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-amber-100 text-amber-700 text-xs font-black tracking-widest uppercase mb-6 border border-amber-200">
                 {t('Enrolling for 2026', 'برائے سال 2026')}
               </span>
-              <h1 className="font-display text-5xl md:text-7xl font-black text-emerald-900 dark:text-white mb-6">
-                {t('Join Al-Noor', 'النور میں شامل ہوں')}
+              <h1 className="font-display text-5xl md:text-7xl font-black text-sky-900 dark:text-white mb-6">
+                {t('Join Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن میں شامل ہوں')}
               </h1>
               <p className="text-zinc-600 dark:text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
                 {t(
@@ -65,7 +65,7 @@ const AdmissionPage = () => {
                         { title: t('Online Registration', 'آن لائن رجسٹریشن'), desc: t('Submit the form on this page.', 'اس صفحے پر فارم جمع کروائیں۔') },
                         { title: t('Initial Interview', 'ابتدائی انٹرویو'), desc: t('Short online assessment with faculty.', 'فیکلٹی کے ساتھ مختصر آن لائن جائزہ۔') },
                         { title: t('Verification', 'تصدیق'), desc: t('Submission of required documents.', 'مطلوبہ دستاویزات کی جمع آوری۔') },
-                        { title: t('Orientation', 'آگاہی پروگرام'), desc: t('Welcome to the Al-Noor family.', 'النور خاندان میں خوش آمدید۔') },
+                        { title: t('Orientation', 'آگاہی پروگرام'), desc: t('Welcome to the Faiz ul Hasnain family.', 'فیض الحسنین خاندان میں خوش آمدید۔') },
                       ].map((step, i) => (
                         <div key={i} className="flex gap-4">
                            <div className="w-8 h-8 rounded-full gradient-primary flex items-center justify-center text-white text-xs font-bold shrink-0">

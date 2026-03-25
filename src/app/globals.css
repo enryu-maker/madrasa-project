@@ -36,7 +36,7 @@
   --card-foreground: #171717;
   --popover: #ffffff;
   --popover-foreground: #171717;
-  --primary: #059669; /* emerald-600 */
+  --primary: #0284c7; /* sky-600 */
   --primary-foreground: #ffffff;
   --secondary: #f4f4f5;
   --secondary-foreground: #18181b;
@@ -48,7 +48,7 @@
   --destructive-foreground: #fafafa;
   --border: #e4e4e7;
   --input: #e4e4e7;
-  --ring: #059669;
+  --ring: #0284c7;
   --radius: 0.75rem;
 }
 
@@ -81,7 +81,7 @@ body {
   }
   
   .gradient-primary {
-    @apply bg-linear-to-r from-emerald-600 to-emerald-800;
+    @apply bg-linear-to-r from-sky-600 via-sky-500 to-sky-500;
   }
   
   .gradient-gold {

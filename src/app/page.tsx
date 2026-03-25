@@ -12,10 +12,10 @@ const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1, y: 0,
-    transition: { 
-      delay: i * 0.15, 
-      duration: 0.6, 
-      ease: [0.22, 1, 0.36, 1] 
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: [0.22, 1, 0.36, 1]
     }
   }),
 };
@@ -64,15 +64,15 @@ export default function Home() {
       <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/madrasa-campus.jpg" 
-            alt="Al-Noor Madrasa Campus" 
+          <Image
+            src="/madrasa-campus.jpg"
+            alt="Faiz ul Hasnain Foundation Campus"
             fill
             className="object-cover"
             priority
             quality={100}
           />
-          <div className="absolute inset-0 bg-linear-to-b from-emerald-950/90 via-emerald-900/60 to-emerald-950/95" />
+          <div className="absolute inset-0 bg-linear-to-b from-sky-950/90 via-sky-900/60 to-sky-950/95" />
           {/* Grain Effect */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay islamic-pattern-bg"></div>
         </div>
@@ -91,20 +91,20 @@ export default function Home() {
               </span>
               {t("Admissions Open 2026", "داخلہ جات جاری ہیں 2026")}
             </span>
-            
+
             <p className="font-arabic text-2xl md:text-3xl text-amber-500/90 mb-4 animate-float">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
-            
+
             <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-6">
-              {t('Al-Noor Madrasa', 'مدرسہ النور')}<br />
+              {t('Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن')}<br />
               <span className="text-amber-400">{t('Center of Excellence', 'اعلیٰ تعلیمی مرکز')}</span>
             </h1>
-            
-            <p className="text-emerald-50/90 text-lg md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+
+            <p className="text-sky-50/90 text-lg md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed font-light">
               {t(
-                "Nurturing the generation of tomorrow through the timeless wisdom of Quran and Sunnah since 1999.",
-                "1999 سے قرآن و سنت کی لازوال حکمت کے ذریعے مستقبل کی نسل کی پرورش کر رہا ہے۔"
+                "Nurturing the generation of tomorrow through the timeless wisdom of Quran and Sunnah since 2024.",
+                "2024 سے قرآن و سنت کی لازوال حکمت کے ذریعے مستقبل کی نسل کی پرورش کر رہا ہے۔"
               )}
             </p>
 
@@ -124,14 +124,14 @@ export default function Home() {
           </motion.div>
 
           {/* Quick Features */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-6 mt-16"
           >
             {features.map((feature, idx) => (
-              <div key={idx} className="flex items-center gap-2 text-emerald-100/70 text-sm md:text-base bg-white/5 px-4 py-2 rounded-full border border-white/5">
+              <div key={idx} className="flex items-center gap-2 text-sky-100/70 text-sm md:text-base bg-white/5 px-4 py-2 rounded-full border border-white/5">
                 <CheckCircle2 className="h-4 w-4 text-amber-500" />
                 {feature}
               </div>
@@ -154,9 +154,9 @@ export default function Home() {
                 variants={fadeUp}
                 className="bg-white dark:bg-zinc-900 glass-card rounded-3xl p-8 text-center shadow-2xl border border-white/50 dark:border-zinc-800 relative overflow-hidden group"
               >
-                <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-500"></div>
-                <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-950/50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
-                  <stat.icon className="h-7 w-7 text-emerald-600 dark:text-emerald-400" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-sky-500/5 rounded-full -mr-12 -mt-12 transition-transform group-hover:scale-150 duration-500"></div>
+                <div className="w-14 h-14 bg-sky-100 dark:bg-sky-950/50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform">
+                  <stat.icon className="h-7 w-7 text-sky-600 dark:text-sky-400" />
                 </div>
                 <p className="text-4xl md:text-5xl font-black text-foreground font-display mb-2">{stat.value}</p>
                 <p className="text-sm font-semibold text-zinc-500 dark:text-zinc-400 tracking-wider uppercase">{stat.label}</p>
@@ -177,18 +177,18 @@ export default function Home() {
               variants={fadeUp}
               className="relative"
             >
-              <div className="absolute -left-12 -top-12 w-64 h-64 bg-emerald-500/10 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute -left-12 -top-12 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl -z-10"></div>
               <div className="relative rounded-3xl md:rounded-[3rem] overflow-hidden shadow-2xl skew-y-2 hover:skew-y-0 transition-transform duration-700 aspect-square md:aspect-video lg:aspect-square">
-                 <Image src="/madrasa-campus.jpg" alt="About Al-Noor" fill className="object-cover" />
-                 <div className="absolute inset-0 bg-linear-to-t from-emerald-900/60 to-transparent"></div>
-                 <div className="absolute bottom-8 left-8 right-8">
-                    <p className="text-white text-xl md:text-2xl font-display leading-relaxed italic">
-                      {t(
-                        '"The best among you is the one who learns Quran and teaches it."',
-                        '"تم میں سے بہترین وہ ہے جو قرآن سیکھے اور سکھائے۔"'
-                      )}
-                    </p>
-                 </div>
+                <Image src="/madrasa-campus.jpg" alt="About Faiz ul Hasnain" fill className="object-cover" />
+                <div className="absolute inset-0 bg-linear-to-t from-sky-900/60 to-transparent"></div>
+                <div className="absolute bottom-8 left-8 right-8">
+                  <p className="text-white text-xl md:text-2xl font-display leading-relaxed italic">
+                    {t(
+                      '"The best among you is the one who learns Quran and teaches it."',
+                      '"تم میں سے بہترین وہ ہے جو قرآن سیکھے اور سکھائے۔"'
+                    )}
+                  </p>
+                </div>
               </div>
             </motion.div>
 
@@ -200,25 +200,25 @@ export default function Home() {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-emerald-600 dark:text-emerald-400 font-bold tracking-widest uppercase text-sm mb-4">
+                <h3 className="text-sky-600 dark:text-sky-400 font-bold tracking-widest uppercase text-sm mb-4">
                   {t('Our Legacy', 'ہماری روایت')}
                 </h3>
                 <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground leading-tight">
-                  {t('Welcome to Al-Noor Madrasa', 'مدرسہ النور میں خوش آمدید')}
+                  {t('Welcome to Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن میں خوش آمدید')}
                 </h2>
               </div>
-              
+
               <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
                 {t(
-                  'Founded in 1999, we have spent over two decades bridging the gap between traditional Islamic scholarship and modern educational needs. Our campus is not just a school, but a spiritual haven where character is forged and faith is strengthened.',
-                  '1999 میں قائم ہوا، ہم نے دو دہائیوں سے زائد عرصہ روایتی اسلامی علم اور جدید تعلیمی ضروریات کے درمیان فرق کو ختم کرنے میں گزارا ہے۔ ہمارا کیمپس صرف ایک سکول نہیں، بلکہ ایک روحانی پناہ گاہ ہے جہاں کردار کو نکھارا جاتا ہے اور ایمان کو مضبوط کیا جاتا ہے۔'
+                  'Founded in 2024, we are dedicated to bridging the gap between traditional Islamic scholarship and modern educational needs. Our campus is not just a school, but a spiritual haven where character is forged and faith is strengthened.',
+                  '2024 میں قائم ہوا، ہم روایتی اسلامی علم اور جدید تعلیمی ضروریات کے درمیان فرق کو ختم کرنے کے لیے وقف ہیں۔ ہمارا کیمپس صرف ایک سکول نہیں، بلکہ ایک روحانی پناہ گاہ ہے جہاں کردار کو نکھارا جاتا ہے اور ایمان کو مضبوط کیا جاتا ہے۔'
                 )}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6">
                 <Link href="/about">
-                  <Button variant="outline" className="h-14 px-8 rounded-xl border-emerald-600 text-emerald-700 hover:bg-emerald-50 dark:hover:bg-emerald-950 font-semibold group">
-                    {t('Read Our History', 'ہماری تاریخ پڑھیں')} 
+                  <Button variant="outline" className="h-14 px-8 rounded-xl border-sky-600 text-sky-700 hover:bg-sky-50 dark:hover:bg-sky-950 font-semibold group">
+                    {t('Read Our History', 'ہماری تاریخ پڑھیں')}
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -259,16 +259,16 @@ export default function Home() {
                 variants={fadeUp}
                 className="bg-card glass-card rounded-4xl p-10 border border-white/40 dark:border-zinc-800 hover:shadow-2xl transition-all group relative animate-in zoom-in duration-500"
               >
-                <div className="absolute top-6 right-8 text-[10px] font-bold uppercase tracking-widest text-emerald-600/50">{course.tag}</div>
+                <div className="absolute top-6 right-8 text-[10px] font-bold uppercase tracking-widest text-sky-600/50">{course.tag}</div>
                 <div className="w-16 h-16 rounded-2xl gradient-primary flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 transition-transform">
                   <course.icon className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-4 group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors">
                   {course.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-8">{course.desc}</p>
                 <div className="pt-6 border-t border-border">
-                  <Link href="/courses" className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-2 text-sm group-hover:underline">
+                  <Link href="/courses" className="text-sky-600 dark:text-sky-400 font-bold flex items-center gap-2 text-sm group-hover:underline">
                     {t('View Curriculum', 'نصاب دیکھیں')} <ArrowRight className="h-4 w-4" />
                   </Link>
                 </div>
@@ -278,8 +278,8 @@ export default function Home() {
 
           <div className="text-center mt-16">
             <Link href="/courses">
-              <Button size="lg" className="rounded-2xl h-14 px-10 gradient-primary text-white shadow-xl shadow-emerald-700/20">
-                {t('Discover All Courses', 'تمام کورسز دریافت کریں')} 
+              <Button size="lg" className="rounded-2xl h-14 px-10 gradient-primary text-white shadow-xl shadow-sky-700/20">
+                {t('Discover All Courses', 'تمام کورسز دریافت کریں')}
               </Button>
             </Link>
           </div>
@@ -289,23 +289,23 @@ export default function Home() {
       {/* Modern Newsletter/CTA Section */}
       <section className="section-padding p-6">
         <div className="container mx-auto">
-          <motion.div 
-             initial="hidden"
-             whileInView="visible"
-             variants={fadeUp}
-             className="relative rounded-4xl md:rounded-[3rem] overflow-hidden gradient-primary text-white p-12 md:p-20 text-center shadow-3xl shadow-emerald-900/40"
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeUp}
+            className="relative rounded-4xl md:rounded-[3rem] overflow-hidden gradient-primary text-white p-12 md:p-20 text-center shadow-3xl shadow-sky-900/40"
           >
             <div className="absolute inset-0 islamic-pattern-bg opacity-10"></div>
             <div className="relative z-10 max-w-4xl mx-auto">
               <h2 className="font-display text-4xl md:text-6xl font-bold mb-8">
                 {t('Begin Your Spiritual Journey of Knowledge Today', 'آج ہی اپنے علم کے روحانی سفر کا آغاز کریں')}
               </h2>
-              <p className="text-emerald-50/80 text-xl md:text-2xl mb-12 font-light">
+              <p className="text-sky-50/80 text-xl md:text-2xl mb-12 font-light">
                 {t('Admissions are now open for the 2026 academic year. Limited seats available for campus and online programs.', 'تعلیمی سال 2026 کے لیے داخلے اب کھلے ہیں۔ کیمپس اور آن لائن پروگراموں کے لیے محدود نشستیں دستیاب ہیں۔')}
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <Link href="/admission">
-                  <Button size="lg" className="h-16 px-12 rounded-2xl bg-white text-emerald-900 hover:bg-emerald-50 font-bold text-lg shadow-2xl">
+                  <Button size="lg" className="h-16 px-12 rounded-2xl bg-white text-sky-900 hover:bg-sky-50 font-bold text-lg shadow-2xl">
                     {t('Apply for Admission', 'داخلے کے لیے درخواست دیں')}
                   </Button>
                 </Link>

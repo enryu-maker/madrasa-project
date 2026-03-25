@@ -30,25 +30,25 @@ const About = () => {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image 
           src="/madrasa-campus.jpg" 
-          alt="Al-Noor Heritage" 
+          alt="Faiz ul Hasnain Heritage" 
           fill 
           className="object-cover opacity-20 dark:opacity-10 scale-110 blur-sm"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-white via-emerald-50/40 to-white dark:from-zinc-950 dark:to-zinc-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-white via-sky-50/40 to-white dark:from-zinc-950 dark:to-zinc-950" />
         
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-             <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 text-sm font-black tracking-widest uppercase mb-6 border border-emerald-200 dark:border-emerald-800">
+             <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-sky-100 dark:bg-sky-950/50 text-sky-700 dark:text-sky-400 text-sm font-black tracking-widest uppercase mb-6 border border-sky-200 dark:border-sky-800">
                {t('About Our Institution', 'ہمارے ادارے کے بارے میں')}
              </span>
-             <h1 className="font-display text-5xl md:text-7xl font-black text-emerald-900 dark:text-white mb-6">
+             <h1 className="font-display text-5xl md:text-7xl font-black text-sky-900 dark:text-white mb-6">
                {t('Faith, Knowledge,', 'ایمان، علم،')} <br />
                <span className="text-amber-500">{t('& Legacy', 'اور روایت')}</span>
              </h1>
              <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
-               {t(
-                 'A journey of spiritual enlightenment and academic excellence that began in 1999.',
-                 'روحانی روشنی اور تعلیمی فضیلت کا ایک سفر جو 1999 میں شروع ہوا۔'
+                {t(
+                 'A journey of spiritual enlightenment and academic excellence that began in 2024.',
+                 'روحانی روشنی اور تعلیمی فضیلت کا ایک سفر جو 2024 میں شروع ہوا۔'
                )}
              </p>
           </motion.div>
@@ -64,10 +64,10 @@ const About = () => {
               <div className="relative space-y-8">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-1 gap-1 flex">
-                    <div className="w-8 h-full bg-emerald-600 rounded-full"></div>
-                    <div className="w-2 h-full bg-emerald-300 rounded-full"></div>
+                    <div className="w-8 h-full bg-sky-600 rounded-full"></div>
+                    <div className="w-2 h-full bg-sky-300 rounded-full"></div>
                   </div>
-                  <span className="font-bold text-emerald-600 tracking-wider uppercase text-sm">{t('Founded 1999', 'قائم شدہ 1999')}</span>
+                  <span className="font-bold text-sky-600 tracking-wider uppercase text-sm">{t('Founded 2024', 'قائم شدہ 2024')}</span>
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-bold text-zinc-900 dark:text-white leading-tight">
                   {t('Decades of Spiritual Guidance', 'روحانی رہنمائی کی دہائیاں')}
@@ -75,30 +75,32 @@ const About = () => {
                 <div className="space-y-6 text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
                   <p>
                     {t(
-                      'Al-Noor Madrasa was established with the vision of providing a comprehensive Islamic education that meets the challenges of the modern world without compromising on traditional values.',
-                      'مدرسہ النور اس وژن کے ساتھ قائم کیا گیا تھا کہ ایک جامع اسلامی تعلیم فراہم کی جائے جو روایتی اقدار پر سمجھوتہ کیے بغیر جدید دنیا کے چیلنجوں کا مقابلہ کر سکے۔'
+                      'Faiz ul Hasnain Foundation was established with the vision of providing a comprehensive Islamic education that meets the challenges of the modern world without compromising on traditional values.',
+                      'فیض الحسنین فاؤنڈیشن اس وژن کے ساتھ قائم کیا گیا تھا کہ ایک جامع اسلامی تعلیم فراہم کی جائے جو روایتی اقدار پر سمجھوتہ کیے بغیر جدید دنیا کے چیلنجوں کا مقابلہ کر سکے۔'
                     )}
                   </p>
                   <p>
                     {t(
-                      'Over the past 25 years, we have grown from a small neighborhood school to a globally recognized center for Islamic scholarship, hosting students from all walks of life.',
-                      'گزشتہ 25 سالوں کے دوران، ہم ایک چھوٹے سے پڑوس کے اسکول سے اسلامی علم کے عالمی سطح پر تسلیم شدہ مرکز بن گئے ہیں، جس میں زندگی کے تمام شعبوں سے تعلق رکھنے والے طلباء موجود ہیں۔'
+                      'Since our founding, we have grown into a globally recognized center for Islamic scholarship, hosting students from all walks of life.',
+                      'اپنے قیام کے بعد سے، ہم اسلامی علم کے عالمی سطح پر تسلیم شدہ مرکز بن گئے ہیں، جس میں زندگی کے تمام شعبوں سے تعلق رکھنے والے طلباء موجود ہیں۔'
                     )}
                   </p>
                 </div>
                 <div className="pt-6">
-                   <Button className="gradient-primary text-white rounded-2xl h-14 px-10 font-bold shadow-xl shadow-emerald-700/20">
-                     {t('View Our Gallery', 'ہماری گیلری دیکھیں')}
-                   </Button>
+                   <Link href="/gallery">
+                     <Button className="gradient-primary text-white rounded-2xl h-14 px-10 font-bold shadow-xl shadow-sky-700/20">
+                       {t('View Our Gallery', 'ہماری گیلری دیکھیں')}
+                     </Button>
+                   </Link>
                 </div>
               </div>
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="relative group">
-              <div className="absolute inset-0 bg-emerald-600 rounded-[3rem] rotate-3 group-hover:rotate-0 transition-transform -z-10"></div>
+              <div className="absolute inset-0 bg-sky-600 rounded-[3rem] rotate-3 group-hover:rotate-0 transition-transform -z-10"></div>
               <div className="relative overflow-hidden rounded-[3rem] shadow-2xl border-4 border-white dark:border-zinc-800 aspect-square">
                  <Image src="/madrasa-campus.jpg" alt="Madrasa Interior" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                 <div className="absolute inset-0 bg-linear-to-t from-emerald-950/60 to-transparent"></div>
+                 <div className="absolute inset-0 bg-linear-to-t from-sky-950/60 to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -116,8 +118,8 @@ const About = () => {
               variants={fadeUp}
               className="bg-white dark:bg-zinc-900 p-12 rounded-[3.5rem] border border-zinc-100 dark:border-zinc-800 shadow-xl shadow-zinc-200/50 dark:shadow-none hover:-translate-y-2 transition-transform"
             >
-              <div className="w-16 h-16 rounded-3xl bg-emerald-100 dark:bg-emerald-950 flex items-center justify-center mb-8">
-                <Target className="h-8 w-8 text-emerald-600" />
+              <div className="w-16 h-16 rounded-3xl bg-sky-100 dark:bg-sky-950 flex items-center justify-center mb-8">
+                <Target className="h-8 w-8 text-sky-600" />
               </div>
               <h3 className="font-display text-3xl font-bold mb-6 text-zinc-900 dark:text-white">{t('Our Mission', 'ہمارا مشن')}</h3>
               <p className="text-zinc-600 dark:text-zinc-400 text-lg leading-relaxed">
@@ -171,7 +173,7 @@ const About = () => {
                 custom={i}
                 className="group p-10 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/30 hover:bg-white dark:hover:bg-zinc-800 hover:shadow-2xl transition-all text-center"
               >
-                <div className="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center mx-auto mb-8 shadow-lg shadow-emerald-400/20 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                <div className="w-14 h-14 rounded-2xl bg-sky-600 text-white flex items-center justify-center mx-auto mb-8 shadow-lg shadow-sky-400/20 group-hover:scale-110 group-hover:rotate-6 transition-transform">
                   <v.icon className="h-7 w-7" />
                 </div>
                 <h4 className="font-display text-2xl font-bold mb-4 text-zinc-900 dark:text-white">{v.title}</h4>
@@ -183,7 +185,7 @@ const About = () => {
       </section>
 
       {/* Principal's Message - Premium Stylized Quote */}
-      <section className="section-padding bg-emerald-950 text-white relative overflow-hidden">
+      <section className="section-padding bg-sky-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 islamic-pattern-bg opacity-10"></div>
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -200,16 +202,16 @@ const About = () => {
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="space-y-8">
                   <h3 className="text-amber-400 font-black uppercase tracking-[0.2em] text-sm">{t("Principal's Message", "پرنسپل کا پیغام")}</h3>
                   <div className="relative">
-                     <p className="text-2xl md:text-3xl font-display leading-[1.6] italic text-emerald-50">
+                     <p className="text-2xl md:text-3xl font-display leading-[1.6] italic text-sky-50">
                         {t(
-                          '"Our commitment at Al-Noor is to cultivate not just minds, but hearts. We believe that true success lies in the balance between rigorous academic pursuit and deep spiritual connection."',
-                          '"مدرسہ النور میں ہمارا عزم صرف ذہنوں کو نہیں بلکہ دلوں کو پروان چڑھانا ہے۔ ہمارا ماننا ہے کہ حقیقی کامیابی سخت تعلیمی جدوجہد اور گہرے روحانی تعلق کے درمیان توازن میں مضمر ہے۔"'
+                          '"Our commitment at Faiz ul Hasnain Foundation is to cultivate not just minds, but hearts. We believe that true success lies in the balance between rigorous academic pursuit and deep spiritual connection."',
+                          '"فیض الحسنین فاؤنڈیشن میں ہمارا عزم صرف ذہنوں کو نہیں بلکہ دلوں کو پروان چڑھانا ہے۔ ہمارا ماننا ہے کہ حقیقی کامیابی سخت تعلیمی جدوجہد اور گہرے روحانی تعلق کے درمیان توازن میں مضمر ہے۔"'
                         )}
                      </p>
                   </div>
                   <div className="pt-4 border-t border-white/10">
                     <p className="text-xl font-bold">{t('Sheikh Maulana Ahmed Ali', 'شیخ مولانا احمد علی')}</p>
-                    <p className="text-emerald-400/80 font-medium">{t('Principal & Senior Scholar', 'پرنسپل اور سینئر عالم')}</p>
+                    <p className="text-sky-400/80 font-medium">{t('Principal & Senior Scholar', 'پرنسپل اور سینئر عالم')}</p>
                   </div>
                </motion.div>
             </div>
@@ -226,12 +228,12 @@ const About = () => {
               </h2>
               <div className="flex flex-wrap justify-center gap-6">
                 <Link href="/admission">
-                  <Button size="lg" className="gradient-primary text-white h-16 px-10 rounded-2xl font-bold text-lg shadow-2xl shadow-emerald-700/20">
+                  <Button size="lg" className="gradient-primary text-white h-16 px-10 rounded-2xl font-bold text-lg shadow-2xl shadow-sky-700/20">
                     {t('Apply for Admission', 'داخلے کے لیے درخواست دیں')}
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button variant="outline" size="lg" className="h-16 px-10 rounded-2xl border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-lg">
+                  <Button variant="outline" size="lg" className="h-16 px-10 rounded-2xl border-sky-600 text-sky-700 hover:bg-sky-50 font-bold text-lg">
                     {t('Get in Touch', 'رابطہ کریں')}
                   </Button>
                 </Link>

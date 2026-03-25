@@ -27,7 +27,7 @@ const Courses = () => {
       desc: t('Focus on correct pronunciation and articulation from the foundational Noorani Qaida.', 'نورانی قاعدہ سے بنیادی تلفظ اور ادائیگی پر توجہ۔'),
       features: [t('Small Class Sizes', 'مختصر کلاسیں'), t('Personalized Feedback', 'انفرادی توجہ'), t('Daily Progress Report', 'روزانہ کی رپورٹ')],
       cta: t('Enroll Now', 'رپورٹ کریں'),
-      color: 'emerald'
+      color: 'sky'
     },
     {
       id: 2,
@@ -79,10 +79,10 @@ const Courses = () => {
     <div className="flex flex-col">
       {/* Soft Header with Glow */}
       <section className="relative h-[45vh] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-linear-to-b from-emerald-50/50 to-transparent dark:from-emerald-950/20 -z-10"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-linear-to-b from-sky-50/50 to-transparent dark:from-sky-950/20 -z-10"></div>
         <div className="container mx-auto px-6 text-center">
            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-              <h1 className="font-display text-5xl md:text-7xl font-black text-emerald-900 dark:text-white mb-6">
+              <h1 className="font-display text-5xl md:text-7xl font-black text-sky-900 dark:text-white mb-6">
                 {t('Our Programs', 'ہمارے پروگرام')}
               </h1>
               <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -107,19 +107,19 @@ const Courses = () => {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
-                className="group relative bg-white dark:bg-zinc-900 rounded-[3rem] p-8 md:p-12 border border-zinc-100 dark:border-zinc-800 shadow-2xl shadow-zinc-200/50 dark:shadow-none hover:-translate-y-2 hover:shadow-emerald-700/5 transition-all"
+                className="group relative bg-white dark:bg-zinc-900 rounded-[3rem] p-8 md:p-12 border border-zinc-100 dark:border-zinc-800 shadow-2xl shadow-zinc-200/50 dark:shadow-none hover:-translate-y-2 hover:shadow-sky-700/5 transition-all"
               >
                 {/* Visual Accent */}
-                <div className="absolute top-0 right-10 -translate-y-1/2 w-20 h-20 rounded-3xl bg-emerald-600 flex items-center justify-center shadow-xl shadow-emerald-400/30 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                <div className="absolute top-0 right-10 -translate-y-1/2 w-20 h-20 rounded-3xl bg-sky-600 flex items-center justify-center shadow-xl shadow-sky-400/30 group-hover:scale-110 group-hover:rotate-6 transition-transform">
                    <course.icon className="h-10 w-10 text-white" />
                 </div>
 
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                   <div>
-                    <h3 className="font-display text-3xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
+                    <h3 className="font-display text-3xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors">
                       {course.title}
                     </h3>
-                    <div className="flex flex-wrap items-center gap-4 text-emerald-600 dark:text-emerald-500 font-bold text-sm tracking-widest uppercase">
+                    <div className="flex flex-wrap items-center gap-4 text-sky-600 dark:text-sky-500 font-bold text-sm tracking-widest uppercase">
                        <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" /> {course.duration}</span>
                        <span className="w-1 h-1 bg-zinc-300 rounded-full"></span>
                        <span>{course.level}</span>
@@ -133,8 +133,8 @@ const Courses = () => {
 
                 <div className="grid md:grid-cols-3 gap-4 mb-10">
                    {course.features.map((f, idx) => (
-                     <div key={idx} className="flex items-center gap-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300 bg-emerald-50 dark:bg-emerald-950/30 px-4 py-2 rounded-xl border border-emerald-100 dark:border-emerald-800/50 scale-100 group-hover:scale-105 transition-transform duration-500" style={{ transitionDelay: `${idx * 100}ms` }}>
-                       <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                     <div key={idx} className="flex items-center gap-3 text-sm font-semibold text-zinc-700 dark:text-zinc-300 bg-sky-50 dark:bg-sky-950/30 px-4 py-2 rounded-xl border border-sky-100 dark:border-sky-800/50 scale-100 group-hover:scale-105 transition-transform duration-500" style={{ transitionDelay: `${idx * 100}ms` }}>
+                       <CheckCircle2 className="h-4 w-4 text-sky-600" />
                        {f}
                      </div>
                    ))}
@@ -142,7 +142,7 @@ const Courses = () => {
 
                 <div className="pt-8 border-t border-zinc-50 dark:border-zinc-800 flex flex-wrap items-center justify-between gap-6">
                    <Link href="/admission" className="flex-1 min-w-[200px]">
-                      <Button size="lg" className="w-full gradient-primary text-white font-bold h-14 rounded-2xl shadow-xl shadow-emerald-700/10 group-active:scale-95 transition-transform">
+                      <Button size="lg" className="w-full gradient-primary text-white font-bold h-14 rounded-2xl shadow-xl shadow-sky-700/10 group-active:scale-95 transition-transform">
                         {course.cta}
                         <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                       </Button>
@@ -171,11 +171,11 @@ const Courses = () => {
                         <p className="text-zinc-500 font-bold uppercase tracking-widest text-sm">{t('Years of Excellence', 'سال کی فضیلت')}</p>
                      </div>
                      <div>
-                        <div className="text-4xl font-black text-emerald-600 mb-2">Qualified</div>
+                        <div className="text-4xl font-black text-sky-600 mb-2">Qualified</div>
                         <p className="text-zinc-500 font-bold uppercase tracking-widest text-sm">{t('Al-Azhar Certification', 'الازہر سند')}</p>
                      </div>
                      <div>
-                        <div className="text-4xl font-black text-emerald-600 mb-2">Modern</div>
+                        <div className="text-4xl font-black text-sky-600 mb-2">Modern</div>
                         <p className="text-zinc-500 font-bold uppercase tracking-widest text-sm">{t('Digital Labs', 'ڈیجیٹل لیبز')}</p>
                      </div>
                   </div>
@@ -187,18 +187,18 @@ const Courses = () => {
       {/* Detailed Program CTA */}
       <section className="section-padding bg-white dark:bg-zinc-950 text-center">
         <div className="container mx-auto">
-           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-4xl mx-auto py-12 px-8 rounded-[4rem] gradient-primary text-white shadow-3xl shadow-emerald-900/30 overflow-hidden relative">
+           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-4xl mx-auto py-12 px-8 rounded-[4rem] gradient-primary text-white shadow-3xl shadow-sky-900/30 overflow-hidden relative">
               <div className="absolute inset-0 islamic-pattern-bg opacity-10"></div>
               <div className="relative z-10">
                  <h2 className="font-display text-4xl md:text-6xl font-black mb-10 leading-tight">
                    {t('Ready to Start Your Journey of Knowledge?', 'سفرِ علم شروع کرنے کے لیے تیار ہیں؟')}
                  </h2>
-                 <p className="text-emerald-50 text-xl md:text-2xl mb-12 font-medium opacity-90">
+                 <p className="text-sky-50 text-xl md:text-2xl mb-12 font-medium opacity-90">
                    {t('Contact our admission counseling team for a personalized course plan today.', 'آج ہی ذاتی تعلیمی منصوبے کے لیے ہماری داخلہ مشاورتی ٹیم سے رابطہ کریں۔')}
                  </p>
                  <div className="flex flex-wrap justify-center gap-6">
                     <Link href="/contact">
-                       <Button size="lg" className="h-16 px-12 rounded-2xl bg-white text-emerald-900 hover:bg-emerald-50 font-bold text-lg">
+                       <Button size="lg" className="h-16 px-12 rounded-2xl bg-white text-sky-900 hover:bg-sky-50 font-bold text-lg">
                          {t('Talk to an Expert', 'ماہر سے بات کریں')}
                        </Button>
                     </Link>

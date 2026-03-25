@@ -15,7 +15,7 @@ export default function NotFound() {
   return (
     <div className="relative min-h-[85vh] flex flex-col items-center justify-center px-8 text-center overflow-hidden bg-white dark:bg-zinc-950 pt-20">
       {/* Visual background accents */}
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-emerald-100/50 rounded-full blur-3xl -z-10 animate-pulse"></div>
+      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-sky-100/50 rounded-full blur-3xl -z-10 animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-100/30 rounded-full blur-3xl -z-10 animate-pulse delay-700"></div>
 
       <motion.div 
@@ -24,15 +24,15 @@ export default function NotFound() {
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         className="relative"
       >
-        <div className="w-28 h-28 rounded-[2.5rem] bg-emerald-50 dark:bg-emerald-950 flex items-center justify-center mb-10 mx-auto shadow-2xl shadow-emerald-700/5 border border-emerald-100/50">
-          <FileQuestion className="h-14 w-14 text-emerald-600 dark:text-emerald-400" />
+        <div className="w-28 h-28 rounded-[2.5rem] bg-sky-50 dark:bg-sky-950 flex items-center justify-center mb-10 mx-auto shadow-2xl shadow-sky-700/5 border border-sky-100/50">
+          <FileQuestion className="h-14 w-14 text-sky-600 dark:text-sky-400" />
         </div>
         
-        <h1 className="text-[12rem] font-black tracking-tighter text-emerald-900/5 dark:text-emerald-500/5 absolute -top-16 left-1/2 -translate-x-1/2 select-none z-0">
+        <h1 className="text-[12rem] font-black tracking-tighter text-sky-900/5 dark:text-sky-500/5 absolute -top-16 left-1/2 -translate-x-1/2 select-none z-0">
           404
         </h1>
         
-        <h2 className="relative z-10 font-display text-4xl md:text-6xl font-black text-emerald-900 dark:text-white mb-6">
+        <h2 className="relative z-10 font-display text-4xl md:text-6xl font-black text-sky-900 dark:text-white mb-6">
           {t("Page Not Found", "صفحہ نہیں ملا")}
         </h2>
         
@@ -45,13 +45,13 @@ export default function NotFound() {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <Link href="/">
-            <Button size="lg" className="h-16 px-10 rounded-2xl md:rounded-3xl gradient-primary text-white font-bold text-lg shadow-2xl shadow-emerald-700/20 active:scale-95 transition-all flex items-center gap-3">
+            <Button size="lg" className="h-16 px-10 rounded-2xl md:rounded-3xl gradient-primary text-white font-bold text-lg shadow-2xl shadow-sky-700/20 active:scale-95 transition-all flex items-center gap-3">
               <Home className="h-5 w-5" />
               {t("Return to Home", "ہوم پر واپس جائیں")}
             </Button>
           </Link>
           <Link href="/contact">
-            <Button variant="outline" size="lg" className="h-16 px-10 rounded-2xl md:rounded-3xl border-emerald-600 text-emerald-700 hover:bg-emerald-50 font-bold text-lg active:scale-95 transition-all flex items-center gap-3">
+            <Button variant="outline" size="lg" className="h-16 px-10 rounded-2xl md:rounded-3xl border-sky-600 text-sky-700 hover:bg-sky-50 font-bold text-lg active:scale-95 transition-all flex items-center gap-3">
               <MessageCircle className="h-5 w-5" />
               {t("Contact Support", "رابطہ کریں")}
             </Button>

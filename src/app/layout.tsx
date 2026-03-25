@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Al-Noor Madrasa - Authentic Islamic Education',
+  title: 'Faiz ul Hasnain Foundation - Authentic Islamic Education',
   description: 'Providing comprehensive Islamic studies and modern education for the next generation.',
 };
 

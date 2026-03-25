@@ -63,14 +63,14 @@ const OnlineClasses = () => {
     <div className="flex flex-col">
        {/* High-End Soft Hero */}
       <section className="relative h-[45vh] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
-        <div className="absolute inset-0 bg-linear-to-b from-emerald-50/50 to-white dark:from-emerald-950/20 -z-10"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-sky-50/50 to-white dark:from-sky-950/20 -z-10"></div>
         <div className="container mx-auto px-6 text-center">
            <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
               <div className="w-16 h-16 rounded-3xl bg-blue-100 flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-400/20">
                  <VideoIcon className="h-8 w-8 text-blue-600" />
               </div>
-              <h1 className="font-display text-5xl md:text-7xl font-black text-emerald-900 dark:text-white mb-6">
-                 {t('Al-Noor Digital', 'النور ڈیجیٹل')}
+              <h1 className="font-display text-5xl md:text-7xl font-black text-sky-900 dark:text-white mb-6">
+                 {t('Faiz ul Hasnain Digital', 'فیض الحسنین ڈیجیٹل')}
               </h1>
               <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
                 {t(
@@ -88,11 +88,11 @@ const OnlineClasses = () => {
           <Tabs defaultValue="schedule" className="w-full">
             <div className="flex justify-center mb-16">
                <TabsList className="h-16 inline-flex bg-zinc-100 dark:bg-zinc-800 p-1.5 rounded-4xl border border-zinc-200 dark:border-zinc-700 shadow-lg">
-                  <TabsTrigger value="schedule" className="px-8 rounded-3xl font-bold text-sm data-[state=active]:bg-emerald-600 data-[state=active]:text-white data-[state=active]:shadow-xl transition-all h-full flex items-center gap-2">
+                  <TabsTrigger value="schedule" className="px-8 rounded-3xl font-bold text-sm data-[state=active]:bg-sky-600 data-[state=active]:text-white data-[state=active]:shadow-xl transition-all h-full flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
                     {t('Live Schedule', 'لائیو شیڈول')}
                   </TabsTrigger>
-                  <TabsTrigger value="lectures" className="px-8 rounded-3xl font-bold text-sm data-[state=active]:bg-emerald-600 data-[state=active]:text-white data-[state=active]:shadow-xl transition-all h-full flex items-center gap-2">
+                  <TabsTrigger value="lectures" className="px-8 rounded-3xl font-bold text-sm data-[state=active]:bg-sky-600 data-[state=active]:text-white data-[state=active]:shadow-xl transition-all h-full flex items-center gap-2">
                     <Play className="h-4 w-4" />
                     {t('Recorded Lectures', 'ریکارڈ شدہ لیکچرز')}
                   </TabsTrigger>
@@ -113,7 +113,7 @@ const OnlineClasses = () => {
                  >
                     <div className="flex items-center gap-4 mb-8">
                        <div className="h-1.5 w-12 gradient-primary rounded-full"></div>
-                       <h3 className="font-display text-2xl font-black text-emerald-900 dark:text-white uppercase tracking-tight">
+                       <h3 className="font-display text-2xl font-black text-sky-900 dark:text-white uppercase tracking-tight">
                          {block.day}
                        </h3>
                     </div>
@@ -122,20 +122,20 @@ const OnlineClasses = () => {
                        {block.classes.map((cls, j) => (
                          <div
                            key={j}
-                           className="bg-white dark:bg-zinc-900 p-8 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-800 flex flex-col md:flex-row md:items-center gap-6 shadow-2xl shadow-zinc-200/50 dark:shadow-none hover:shadow-emerald-700/5 transition-all group"
+                           className="bg-white dark:bg-zinc-900 p-8 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-800 flex flex-col md:flex-row md:items-center gap-6 shadow-2xl shadow-zinc-200/50 dark:shadow-none hover:shadow-sky-700/5 transition-all group"
                          >
-                            <div className="flex items-center gap-3 gradient-primary px-6 py-3 rounded-2xl text-white shadow-xl shadow-emerald-400/20 group-hover:scale-105 transition-transform">
+                            <div className="flex items-center gap-3 gradient-primary px-6 py-3 rounded-2xl text-white shadow-xl shadow-sky-400/20 group-hover:scale-105 transition-transform">
                                <Clock className="h-5 w-5" />
                                <span className="font-black text-sm">{cls.time}</span>
                             </div>
                             <div className="flex-1">
-                               <p className="font-display text-2xl font-bold text-zinc-900 dark:text-white mb-1 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">{cls.title}</p>
+                               <p className="font-display text-2xl font-bold text-zinc-900 dark:text-white mb-1 group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors">{cls.title}</p>
                                <div className="flex items-center gap-2 text-zinc-500 text-sm font-semibold">
                                   <Users className="h-4 w-4 text-amber-500" />
                                   <span>{cls.teacher}</span>
                                </div>
                             </div>
-                            <Button className="h-14 px-8 rounded-2xl border-emerald-600/20 text-emerald-700 bg-emerald-50 hover:bg-emerald-600 hover:text-white font-black text-sm shadow-xl hover:shadow-emerald-600/20 active:scale-95 transition-all">
+                            <Button className="h-14 px-8 rounded-2xl border-sky-600/20 text-sky-700 bg-sky-50 hover:bg-sky-600 hover:text-white font-black text-sm shadow-xl hover:shadow-sky-600/20 active:scale-95 transition-all">
                                {t('Join Virtual Room', 'کمرہِ جماعت میں شامل ہوں')}
                                <ArrowRight className="ml-2 h-4 w-4" />
                             </Button>
@@ -151,12 +151,12 @@ const OnlineClasses = () => {
                   <h4 className="font-bold text-zinc-900 dark:text-white mb-2">{t('How to Join Live Classes?', 'لائیو کلاسز میں کیسے شامل ہوں؟')}</h4>
                   <p className="text-sm text-zinc-500 max-w-lg mx-auto leading-relaxed">
                     {t(
-                      'All live classes are conducted via Al-Noor Zoom for Education. Make sure you have a stable internet connection and have completed your digital orientation session.',
-                      'تمام لائیو کلاسز النور ایجوکیشن زوم کے ذریعے منعقد کی جاتی ہیں۔ یقینی بنائیں کہ آپ کے پاس مستحکم انٹرنیٹ کنکشن ہے اور آپ نے اپنا ڈیجیٹل آگاہی اجلاس مکمل کر لیا ہے۔'
+                      'All live classes are conducted via Faiz ul Hasnain Zoom for Education. Make sure you have a stable internet connection and have completed your digital orientation session.',
+                      'تمام لائیو کلاسز فیض الحسنین ایجوکیشن زوم کے ذریعے منعقد کی جاتی ہیں۔ یقینی بنائیں کہ آپ کے پاس مستحکم انٹرنیٹ کنکشن ہے اور آپ نے اپنا ڈیجیٹل آگاہی اجلاس مکمل کر لیا ہے۔'
                     )}
                   </p>
                   <div className="flex justify-center gap-6 mt-6">
-                     <div className="flex items-center gap-2 text-xs font-bold text-emerald-600"><Wifi className="h-4 w-4" /> Stable Connection</div>
+                     <div className="flex items-center gap-2 text-xs font-bold text-sky-600"><Wifi className="h-4 w-4" /> Stable Connection</div>
                      <div className="flex items-center gap-2 text-xs font-bold text-blue-600"><GraduationCap className="h-4 w-4" /> Registration Required</div>
                   </div>
                </motion.div>
@@ -173,12 +173,12 @@ const OnlineClasses = () => {
                        whileInView="visible"
                        viewport={{ once: true }}
                        variants={fadeUp}
-                       className="group bg-white dark:bg-zinc-900 rounded-[3rem] overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-2xl hover:shadow-emerald-700/10 transition-all"
+                       className="group bg-white dark:bg-zinc-900 rounded-[3rem] overflow-hidden border border-zinc-100 dark:border-zinc-800 shadow-2xl hover:shadow-sky-700/10 transition-all"
                     >
                        <div className="relative aspect-video overflow-hidden">
                           <Image src={lecture.thumbnail} alt={lecture.title} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                          <div className="absolute inset-0 bg-emerald-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                             <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-2xl shadow-emerald-400/40 scale-0 group-hover:scale-100 transition-transform">
+                          <div className="absolute inset-0 bg-sky-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                             <div className="w-16 h-16 rounded-full gradient-primary flex items-center justify-center shadow-2xl shadow-sky-400/40 scale-0 group-hover:scale-100 transition-transform">
                                 <Play className="h-8 w-8 text-white fill-current ml-1" />
                              </div>
                           </div>
@@ -187,14 +187,14 @@ const OnlineClasses = () => {
                           </div>
                        </div>
                        <div className="p-8">
-                          <h4 className="font-display text-2xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-emerald-700 transition-colors uppercase tracking-tight">
+                          <h4 className="font-display text-2xl font-bold text-zinc-900 dark:text-white mb-2 group-hover:text-sky-700 transition-colors uppercase tracking-tight">
                             {lecture.title}
                           </h4>
                           <p className="text-zinc-500 font-bold text-sm flex items-center gap-2 mb-6">
-                             <Users className="h-4 w-4 text-emerald-600" />
+                             <Users className="h-4 w-4 text-sky-600" />
                              {lecture.teacher}
                           </p>
-                          <Button variant="ghost" className="w-full h-12 rounded-xl group-hover:bg-emerald-50 dark:group-hover:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400 font-black text-sm">
+                          <Button variant="ghost" className="w-full h-12 rounded-xl group-hover:bg-sky-50 dark:group-hover:bg-sky-950/50 text-sky-700 dark:text-sky-400 font-black text-sm">
                              {t('Start Learning', 'سیکھنا شروع کریں')}
                           </Button>
                        </div>
@@ -209,18 +209,18 @@ const OnlineClasses = () => {
       {/* Large Digital CTA */}
       <section className="section-padding bg-white dark:bg-zinc-950 text-center">
         <div className="container mx-auto">
-           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-4xl mx-auto py-20 px-10 rounded-4xl gradient-primary text-white shadow-3xl shadow-emerald-900/40 relative group overflow-hidden">
+           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="max-w-4xl mx-auto py-20 px-10 rounded-4xl gradient-primary text-white shadow-3xl shadow-sky-900/40 relative group overflow-hidden">
               <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity border-4 border-dashed border-white/20 m-4 rounded-[3.5rem]"></div>
               <div className="relative z-10">
                  <h2 className="font-display text-4xl md:text-6xl font-black mb-10 leading-tight">
                    {t('Digital Scholars of the Future Start Here', 'مستقبل کے ڈیجیٹل اسکالرز کا آغاز یہاں سے ہوتا ہے')}
                  </h2>
-                 <p className="text-emerald-50 text-xl md:text-2xl mb-12 font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">
+                 <p className="text-sky-50 text-xl md:text-2xl mb-12 font-medium opacity-90 max-w-2xl mx-auto leading-relaxed">
                    {t('Register for our online admission test for the upcoming global batch. Limited virtual seats available.', 'عالمی سطح پر آنے والے بیچ کے لیے ہمارے آن لائن داخلہ ٹیسٹ کے لیے رجسٹر ہوں۔ ورچوئل نشستیں محدود ہیں۔')}
                  </p>
                  <div className="flex flex-wrap justify-center gap-6">
                     <Link href="/admission">
-                       <Button size="lg" className="h-16 px-12 rounded-2xl bg-white text-emerald-900 hover:bg-emerald-50 font-bold text-lg shadow-2xl">
+                       <Button size="lg" className="h-16 px-12 rounded-2xl bg-white text-sky-900 hover:bg-sky-50 font-bold text-lg shadow-2xl">
                          {t('Begin Digital Admission', 'ڈیجیٹل داخلہ شروع کریں')}
                        </Button>
                     </Link>

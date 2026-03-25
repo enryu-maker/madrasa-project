@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X, Globe } from 'lucide-react';
@@ -18,7 +19,7 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!isMobile && isOpen) {
-        setIsOpen(false);
+      setIsOpen(false);
     }
   }, [isMobile, isOpen]);
 
@@ -44,23 +45,29 @@ const Navbar = () => {
   return (
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled 
-        ? "bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md shadow-sm border-b border-zinc-200/50 dark:border-zinc-800/50 py-2" 
+      scrolled
+        ? "bg-white/95 dark:bg-zinc-950/95 backdrop-blur-md shadow-sm border-b border-zinc-200/50 dark:border-zinc-800/50 py-2"
         : "bg-white/80 backdrop-blur-sm py-4"
     )}>
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-              <span className="text-xl">🕌</span>
+          <Link href="/" className="flex items-center gap-3 sm:gap-4 group">
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform bg-black shrink-0 border border-zinc-200 dark:border-zinc-800">
+              <Image 
+                src="/logofaiz.jpeg" 
+                alt="Faiz ul Hasnain Foundation Logo" 
+                fill
+                sizes="(max-width: 768px) 64px, 80px"
+                className="object-contain p-1"
+              />
             </div>
-            <div>
-              <h1 className="font-display font-bold text-xl text-emerald-900 dark:text-emerald-100 leading-tight">
-                {t('Al-Noor Madrasa', 'مدرسہ النور')}
+            <div className="flex flex-col justify-center">
+              <h1 className="font-display font-bold text-lg md:text-xl text-sky-950 dark:text-sky-100 leading-tight">
+                {t('Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن')}
               </h1>
-              <p className="text-[10px] text-zinc-500 font-medium tracking-wide uppercase">
-                {t('Authentic Islamic Education', 'مستند اسلامی تعلیم')}
+              <p className="text-[10px] md:text-xs text-zinc-500 font-medium tracking-wide uppercase mt-0.5">
+                {t('Our Mission Our Identity', 'ہمارا مشن ہماری پہچان')}
               </p>
             </div>
           </Link>
@@ -76,8 +83,8 @@ const Navbar = () => {
                   className={cn(
                     "px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300",
                     isActive
-                      ? "bg-emerald-600 text-white shadow-md shadow-emerald-600/20"
-                      : "text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+                      ? "bg-sky-600 text-white shadow-md shadow-sky-600/20"
+                      : "text-zinc-600 dark:text-zinc-400 hover:text-sky-600 hover:bg-sky-50 dark:hover:bg-sky-900/20"
                   )}
                 >
                   {link.label}
@@ -92,12 +99,12 @@ const Navbar = () => {
               variant="outline"
               size="sm"
               onClick={toggleLang}
-              className="hidden md:flex items-center gap-2 rounded-full border-emerald-600/20 text-emerald-700 bg-white/50 backdrop-blur-md hover:bg-emerald-600 hover:text-white transition-all font-bold"
+              className="hidden md:flex items-center gap-2 rounded-full border-sky-600/20 text-sky-700 bg-white/50 backdrop-blur-md hover:bg-sky-600 hover:text-white transition-all font-bold"
             >
               <Globe className="h-4 w-4" />
               <span>{lang === 'en' ? 'اردو' : 'English'}</span>
             </Button>
-            
+
             <Link href="/admission" className="hidden lg:block">
               <Button size="sm" className="gradient-gold text-white font-bold rounded-full px-6 shadow-lg shadow-amber-500/20">
                 {t('Join Us', 'شامل ہوں')}
@@ -115,7 +122,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div 
+        <div
           className={cn(
             "xl:hidden overflow-hidden transition-all duration-500 ease-in-out",
             isOpen ? "max-h-[600px] border-t border-zinc-100 dark:border-zinc-800 mt-4 py-6 opacity-100" : "max-h-0 opacity-0"
@@ -130,7 +137,7 @@ const Navbar = () => {
                 className={cn(
                   "px-6 py-3 rounded-2xl text-base font-semibold transition-all",
                   pathname === link.path
-                    ? "bg-emerald-600 text-white"
+                    ? "bg-sky-600 text-white"
                     : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-50 dark:hover:bg-zinc-900"
                 )}
               >
@@ -138,19 +145,19 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-4 mt-4 border-t border-zinc-100 dark:border-zinc-800 flex flex-col gap-3">
-               <Button
+              <Button
                 variant="outline"
                 onClick={toggleLang}
-                className="w-full justify-between h-12 rounded-xl border-emerald-600/20 px-6 font-bold"
+                className="w-full justify-between h-12 rounded-xl border-sky-600/20 px-6 font-bold"
               >
                 <div className="flex items-center gap-2">
                   <Globe className="h-5 w-5" />
                   <span>{lang === 'en' ? 'Switch to Urdu' : 'English میں تبدیل کریں'}</span>
                 </div>
-                <span className="text-emerald-600">{lang === 'en' ? 'اردو' : 'EN'}</span>
+                <span className="text-sky-600">{lang === 'en' ? 'اردو' : 'EN'}</span>
               </Button>
               <Link href="/admission" className="w-full">
-                <Button className="w-full h-12 rounded-xl gradient-primary text-white font-bold">
+                <Button className="w-full h-12 rounded-xl gradient-primary text-white font-bold border-0 hover:shadow-lg hover:shadow-sky-500/20">
                   {t('Join Online Class', 'آن لائن کلاس میں شامل ہوں')}
                 </Button>
               </Link>
