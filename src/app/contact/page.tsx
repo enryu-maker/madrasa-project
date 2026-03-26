@@ -33,9 +33,9 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: Phone, label: t('Call Us', 'ہمیں کال کریں'), value: '+92 300 1234567', desc: t('Mon-Sat, 9am-6pm', 'پیر تا ہفتہ، صبح 9 بجے سے شام 6 بجے تک') },
+    { icon: Phone, label: t('Call Us', 'ہمیں کال کریں'), value: '+91 6306866039', desc: t('Mon-Sat, 9am-6pm', 'پیر تا ہفتہ، صبح 9 بجے سے شام 6 بجے تک') },
     { icon: Mail, label: t('Email Us', 'ہمیں ای میل کریں'), value: 'info@alnoormadrasa.edu', desc: t('We reply within 24 hours', 'ہم 24 گھنٹوں کے اندر جواب دیتے ہیں') },
-    { icon: MapPin, label: t('Our Location', 'ہمارا مقام'), value: t('DHA Phase 6, Karachi, Pakistan', 'ڈی ایچ اے فیز 6، کراچی، پاکستان'), desc: t('Visit our main campus', 'ہمارے مین کیمپس کا دورہ کریں') },
+    { icon: MapPin, label: t('Our Location', 'ہمارا مقام'), value: t('Plot No: 39, Gat No: 8A/8B, Kedarnath Colony, Virat Sankul, Sanjiv Nagar, Ambad Link Road, Nashik, Maharashtra, India', 'پلاٹ نمبر: 39، گٹ نمبر: 8A/8B، کیدارناتھ کالونی، وراٹ سنکل، سنجے ناگر، امباد لنک روڈ، ناشک، ایم ایچ، بھارت'), desc: t('Visit our main campus', 'ہمارے مین کیمپس کا دورہ کریں') },
   ];
 
   return (
@@ -144,7 +144,7 @@ const Contact = () => {
                         id="phone" 
                         {...register('phone')} 
                         className="h-14 px-6 rounded-2xl border-zinc-100 bg-zinc-50/50 dark:bg-zinc-800 focus:ring-sky-600 font-bold" 
-                        placeholder={t('e.g. +92 300 0000000', 'مثلاً 0000000 300 92+')}
+                        placeholder={t('e.g. +91 6306866039', 'مثلاً 6306866039 91+')}
                       />
                   </div>
 
@@ -193,12 +193,12 @@ const Contact = () => {
                  </div>
                  <div className="flex items-center gap-3 bg-sky-50 dark:bg-sky-950/40 px-6 py-3 rounded-full border border-sky-100 dark:border-sky-800 mt-4 md:mt-0">
                     <Globe className="h-5 w-5 text-sky-600" />
-                    <span className="text-sm font-black text-sky-900 dark:text-sky-100 tracking-tight uppercase">DHA Phase 6, Karachi</span>
+                    <span className="text-sm font-black text-sky-900 dark:text-sky-100 tracking-tight uppercase">Nashik, Maharashtra</span>
                  </div>
               </div>
               <div className="aspect-video w-full grayscale-[0.5] contrast-[1.2] hover:grayscale-0 transition-all duration-700 rounded-b-[3.5rem] overflow-hidden">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115867.24157143615!2d67.0181741!3d24.8344199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c563469e38f%3A0xc3f63964f43493e!2sDHA%20Phase%206%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1709123456789!5m2!1sen!2s" 
+                  src="https://maps.google.com/maps?q=Nashik,+Maharashtra,+India&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                   width="100%" 
                   height="100%" 
                   style={{ border: 0 }} 
