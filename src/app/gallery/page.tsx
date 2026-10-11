@@ -51,8 +51,8 @@ const GalleryPage = () => {
             </h1>
             <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
               {t(
-                'A visual journey through the life and events at Faiz ul Hasnain Foundation.',
-                'فیض الحسنین فاؤنڈیشن میں زندگی اور تقریبات کا ایک بصری سفر۔'
+                'A visual journey through the life and events at Abu Bakar Foundation.',
+                'ابوبکر فاؤنڈیشن میں زندگی اور تقریبات کا ایک بصری سفر۔'
               )}
             </p>
           </motion.div>

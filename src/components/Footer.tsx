@@ -40,8 +40,8 @@ const Footer = () => {
             <Link href="/" className="inline-flex items-center gap-4 group">
               <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-white flex items-center justify-center border-2 border-white/30 group-hover:scale-105 transition-transform overflow-hidden shrink-0 shadow-2xl">
                 <Image
-                  src="/logofaiz.jpeg"
-                  alt="Faiz ul Hasnain Foundation Logo"
+                  src="/logo.jpg"
+                  alt="Abu Bakar Foundation Logo"
                   fill
                   sizes="(max-width: 768px) 64px, 80px"
                   className="object-contain p-1"
@@ -49,7 +49,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col justify-center">
                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight leading-tight">
-                  {t('Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن')}
+                  {t('Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن')}
                 </h3>
                 <p className="text-[#7ED321] text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mt-1">
                   {t('Our Mission Our Identity', 'ہمارا مشن ہماری پہچان')}
@@ -151,8 +151,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-[10px] text-[#7ED321] font-bold uppercase tracking-widest mb-1">{t('Email', 'ای میل')}</p>
-                  <a href="mailto:info@faizulhasnain.org" className="text-blue-100/80 font-semibold text-sm hover:text-white transition-colors">
-                    info@faizulhasnain.org
+                  <a href="mailto:info@abubakarfoundation.org" className="text-blue-100/80 font-semibold text-sm hover:text-white transition-colors">
+                    info@abubakarfoundation.org
                   </a>
                 </div>
               </li>
@@ -173,7 +173,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-blue-100/40 text-xs font-bold tracking-widest uppercase text-center">
-            © {new Date().getFullYear()} {t('Faiz ul Hasnain Foundation. All rights reserved.', 'فیض الحسنین فاؤنڈیشن۔ جملہ حقوق محفوظ ہیں۔')}
+            © {new Date().getFullYear()} {t('Abu Bakar Foundation. All rights reserved.', 'ابوبکر فاؤنڈیشن۔ جملہ حقوق محفوظ ہیں۔')}
           </p>
           <div className="flex gap-6 text-xs font-bold text-blue-100/30 uppercase tracking-widest">
             <Link href="#" className="hover:text-[#7ED321] transition-colors">{t('Privacy Policy', 'رازداری')}</Link>

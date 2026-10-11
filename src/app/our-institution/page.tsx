@@ -30,7 +30,7 @@ const scaleIn: Variants = {
 
 const FAQ_ITEMS = (t: (en: string, ur: string) => string) => [
   {
-    q: t('Who can enroll in Faiz ul Hasnain Foundation?', 'فیض الحسنین فاؤنڈیشن میں کون داخلہ لے سکتا ہے؟'),
+    q: t('Who can enroll in Abu Bakar Foundation?', 'ابوبکر فاؤنڈیشن میں کون داخلہ لے سکتا ہے؟'),
     a: t('We welcome students of all ages — children, youth, and adults. Both male and female students are admitted with separate facilities for sisters.', 'ہم تمام عمر کے طلباء کا خیرمقدم کرتے ہیں — بچے، نوجوان اور بڑے۔ مرد اور خواتین دونوں طلباء کو علیحدہ سہولیات کے ساتھ داخل کیا جاتا ہے۔')
   },
   {
@@ -100,7 +100,7 @@ export default function OurInstitution() {
   ];
 
   const milestones = [
-    { year: '2024', label: t('Foundation Established', 'ادارہ قائم ہوا'), detail: t('Faiz ul Hasnain Foundation officially launched in Nashik with its first batch.', 'فیض الحسنین فاؤنڈیشن باضابطہ طور پر ناشک میں اپنے پہلے بیچ کے ساتھ شروع ہوئی۔') },
+    { year: '2024', label: t('Foundation Established', 'ادارہ قائم ہوا'), detail: t('Abu Bakar Foundation officially launched in Nashik with its first batch.', 'ابوبکر فاؤنڈیشن باضابطہ طور پر ناشک میں اپنے پہلے بیچ کے ساتھ شروع ہوئی۔') },
     { year: '2024', label: t('Hifz Department Opened', 'شعبہ حفظ کا آغاز'), detail: t('A dedicated Hifz ul Quran program with qualified Huffaz teachers established.', 'مستند حافظ اساتذہ کے ساتھ مخصوص حفظ القرآن پروگرام قائم ہوا۔') },
     { year: '2025', label: t('Online Classes Launched', 'آن لائن کلاسز کا آغاز'), detail: t('Extended reach globally through live and recorded online Islamic education.', 'لائیو اور ریکارڈ شدہ آن لائن اسلامی تعلیم کے ذریعے عالمی رسائی میں اضافہ۔') },
     { year: '2025', label: t('Female Department Added', 'شعبہ طالبات'), detail: t('A fully equipped, separate female department inaugurated with female faculty.', 'خواتین اساتذہ کے ساتھ مکمل طور پر لیس، علیحدہ شعبہ طالبات کا افتتاح۔') },
@@ -137,7 +137,7 @@ export default function OurInstitution() {
           <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#53B32E]/20 border border-[#53B32E]/40 text-[#7ED321] text-sm font-bold tracking-wider uppercase mb-8">
               <Building2 className="h-4 w-4" />
-              {t('Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن')}
+              {t('Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن')}
             </div>
 
             <h1 className="font-display text-5xl md:text-7xl font-black text-white leading-tight mb-6">
@@ -206,7 +206,7 @@ export default function OurInstitution() {
                 </h2>
               </div>
               <div className="space-y-5 text-zinc-600 text-base leading-relaxed">
-                <p>{t('Faiz ul Hasnain Foundation was established in 2024 in Nashik, Maharashtra, India, with the vision of providing authentic and comprehensive Islamic education to students of all backgrounds.', 'فیض الحسنین فاؤنڈیشن 2024 میں ناشک، مہاراشٹرا، ہندوستان میں تمام پس منظر کے طلباء کو مستند اور جامع اسلامی تعلیم فراہم کرنے کے وژن کے ساتھ قائم کی گئی۔')}</p>
+                <p>{t('Abu Bakar Foundation was established in 2024 in Nashik, Maharashtra, India, with the vision of providing authentic and comprehensive Islamic education to students of all backgrounds.', 'ابوبکر فاؤنڈیشن 2024 میں ناشک، مہاراشٹرا، ہندوستان میں تمام پس منظر کے طلباء کو مستند اور جامع اسلامی تعلیم فراہم کرنے کے وژن کے ساتھ قائم کی گئی۔')}</p>
                 <p>{t('Our educational philosophy is rooted in the beautiful balance between Deen and Dunya — nurturing students who are spiritually grounded, academically capable, and morally strong.', 'ہمارا تعلیمی فلسفہ دین اور دنیا کے درمیان خوبصورت توازن میں جڑا ہوا ہے — ایسے طلباء کی پرورش کرنا جو روحانی طور پر مضبوط، تعلیمی طور پر قابل اور اخلاقی طور پر مضبوط ہوں۔')}</p>
                 <p>{t('We are deeply committed to Tarbiyah — the holistic development of the student as a Muslim, a human being, and a contributor to society.', 'ہم تربیت کے لیے گہری وابستگی رکھتے ہیں — ایک مسلمان، ایک انسان اور معاشرے میں شراکت دار کے طور پر طالب علم کی جامع ترقی۔')}</p>
               </div>
@@ -230,7 +230,7 @@ export default function OurInstitution() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="relative group">
               <div className="absolute inset-0 bg-[#1E5DBB] rounded-3xl rotate-3 group-hover:rotate-0 transition-transform -z-10"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white aspect-[4/3]">
-                <Image src="/madrasa-campus.jpg" alt="Faiz ul Hasnain Campus" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/madrasa-campus.jpg" alt="Abu Bakar Foundation Campus" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B3D91]/60 to-transparent"></div>
               </div>
             </motion.div>
@@ -553,8 +553,8 @@ export default function OurInstitution() {
               {
                 icon: Mail,
                 title: t('Email', 'ای میل'),
-                content: 'info@faizulhasnain.org',
-                color: '#F28C28', link: 'mailto:info@faizulhasnain.org'
+                content: 'info@abubakarfoundation.org',
+                color: '#F28C28', link: 'mailto:info@abubakarfoundation.org'
               },
               {
                 icon: Clock,

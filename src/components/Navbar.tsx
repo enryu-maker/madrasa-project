@@ -46,20 +46,21 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-16">
 
-          {/* Logo */}
+          {/* Logo / Brand Name */}
           <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <div className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform bg-white shrink-0 border-2 border-[#E9EEF4]">
+            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform bg-white shrink-0 border border-[#E9EEF4]">
               <Image
-                src="/logofaiz.jpeg"
-                alt="Faiz ul Hasnain Foundation Logo"
+                src="/logo.jpg"
+                alt="Abu Bakar Foundation Logo"
                 fill
-                sizes="(max-width: 768px) 56px, 64px"
+                sizes="(max-width: 768px) 48px, 56px"
                 className="object-contain p-0.5"
+                priority
               />
             </div>
             <div className="flex flex-col justify-center">
               <h1 className="font-display font-extrabold text-base md:text-lg text-[#0B3D91] leading-tight">
-                {t('Faiz ul Hasnain Foundation', 'فیض الحسنین فاؤنڈیشن')}
+                {t('Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن')}
               </h1>
               <p className="text-[9px] md:text-[11px] text-[#53B32E] font-bold tracking-wide uppercase mt-0.5">
                 {t('Our Mission Our Identity', 'ہمارا مشن ہماری پہچان')}

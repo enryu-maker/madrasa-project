@@ -70,7 +70,7 @@ const OnlineClasses = () => {
                  <VideoIcon className="h-8 w-8 text-blue-600" />
               </div>
               <h1 className="font-display text-5xl md:text-7xl font-black text-sky-900 dark:text-white mb-6">
-                 {t('Faiz ul Hasnain Digital', 'فیض الحسنین ڈیجیٹل')}
+                 {t('Abu Bakar Foundation Digital', 'ابوبکر فاؤنڈیشن ڈیجیٹل')}
               </h1>
               <p className="text-zinc-600 dark:text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
                 {t(
@@ -151,8 +151,8 @@ const OnlineClasses = () => {
                   <h4 className="font-bold text-zinc-900 dark:text-white mb-2">{t('How to Join Live Classes?', 'لائیو کلاسز میں کیسے شامل ہوں؟')}</h4>
                   <p className="text-sm text-zinc-500 max-w-lg mx-auto leading-relaxed">
                     {t(
-                      'All live classes are conducted via Faiz ul Hasnain Zoom for Education. Make sure you have a stable internet connection and have completed your digital orientation session.',
-                      'تمام لائیو کلاسز فیض الحسنین ایجوکیشن زوم کے ذریعے منعقد کی جاتی ہیں۔ یقینی بنائیں کہ آپ کے پاس مستحکم انٹرنیٹ کنکشن ہے اور آپ نے اپنا ڈیجیٹل آگاہی اجلاس مکمل کر لیا ہے۔'
+                      'All live classes are conducted via Abu Bakar Foundation Zoom for Education. Make sure you have a stable internet connection and have completed your digital orientation session.',
+                      'تمام لائیو کلاسز ابوبکر فاؤنڈیشن ایجوکیشن زوم کے ذریعے منعقد کی جاتی ہیں۔ یقینی بنائیں کہ آپ کے پاس مستحکم انٹرنیٹ کنکشن ہے اور آپ نے اپنا ڈیجیٹل آگاہی اجلاس مکمل کر لیا ہے۔'
                     )}
                   </p>
                   <div className="flex justify-center gap-6 mt-6">

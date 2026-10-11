@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Faiz ul Hasnain Foundation — Authentic Islamic Education | Nashik, India',
+  title: 'Abu Bakar Foundation — Authentic Islamic Education | Nashik, India',
   description: 'A trusted Islamic educational institution dedicated to nurturing Deen, character, Quran, and academic excellence. Campus & Online programs available.',
   keywords: 'Islamic education, Quran, Hifz, Dars-e-Nizami, Nashik, Madrasa, online Quran classes',
 };

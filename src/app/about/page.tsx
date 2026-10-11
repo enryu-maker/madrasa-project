@@ -101,7 +101,7 @@ const About = () => {
                   {t('A New Chapter in Islamic Excellence', 'اسلامی فضیلت میں ایک نیا باب')}
                 </h2>
                 <div className="space-y-5 text-zinc-600 text-lg leading-relaxed">
-                  <p>{t('Faiz ul Hasnain Foundation was established with the vision of providing a comprehensive Islamic education that meets the challenges of the modern world without compromising on traditional values.', 'فیض الحسنین فاؤنڈیشن اس وژن کے ساتھ قائم کیا گیا تھا کہ ایک جامع اسلامی تعلیم فراہم کی جائے جو روایتی اقدار پر سمجھوتہ کیے بغیر جدید دنیا کے چیلنجوں کا مقابلہ کر سکے۔')}</p>
+                  <p>{t('Abu Bakar Foundation was established with the vision of providing a comprehensive Islamic education that meets the challenges of the modern world without compromising on traditional values.', 'ابوبکر فاؤنڈیشن اس وژن کے ساتھ قائم کیا گیا تھا کہ ایک جامع اسلامی تعلیم فراہم کی جائے جو روایتی اقدار پر سمجھوتہ کیے بغیر جدید دنیا کے چیلنجوں کا مقابلہ کر سکے۔')}</p>
                   <p>{t('Since our founding, we have grown into a recognized center for Islamic scholarship, hosting students from all walks of life, including both on-campus and online learners across the globe.', 'اپنے قیام کے بعد سے، ہم اسلامی علم کے تسلیم شدہ مرکز بن گئے ہیں، جن میں کیمپس اور آن لائن — دونوں قسم کے طلباء شامل ہیں۔')}</p>
                   <p>{t('Our qualified faculty members hold authentic Ijazahs (chains of transmission) connecting them directly to the Prophet ﷺ, ensuring that every student receives the most authentic knowledge.', 'ہمارے مستند اساتذہ کے پاس حقیقی اجازتیں ہیں جو انہیں براہِ راست نبی ﷺ سے جوڑتی ہیں۔')}</p>
                 </div>
@@ -204,11 +204,11 @@ const About = () => {
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="space-y-8">
                 <h3 className="text-[#7ED321] font-black uppercase tracking-[0.2em] text-sm">{t("Principal's Message", "پرنسپل کا پیغام")}</h3>
                 <p className="text-2xl md:text-3xl font-display leading-[1.6] italic text-blue-50">
-                  {t('"Our commitment at Faiz ul Hasnain Foundation is to cultivate not just minds, but hearts. We believe that true success lies in the balance between rigorous academic pursuit and deep spiritual connection."', '"فیض الحسنین فاؤنڈیشن میں ہمارا عزم صرف ذہنوں کو نہیں بلکہ دلوں کو پروان چڑھانا ہے۔ ہمارا ماننا ہے کہ حقیقی کامیابی سخت تعلیمی جدوجہد اور گہرے روحانی تعلق کے درمیان توازن میں مضمر ہے۔"')}
+                  {t('"Our commitment at Abu Bakar Foundation is to cultivate not just minds, but hearts. We believe that true success lies in the balance between rigorous academic pursuit and deep spiritual connection."', '"ابوبکر فاؤنڈیشن میں ہمارا عزم صرف ذہنوں کو نہیں بلکہ دلوں کو پروان چڑھانا ہے۔ ہمارا ماننا ہے کہ حقیقی کامیابی سخت تعلیمی جدوجہد اور گہرے روحانی تعلق کے درمیان توازن میں مضمر ہے۔"')}
                 </p>
                 <div className="pt-4 border-t border-white/10">
                   <p className="text-xl font-bold">{t('Sheikh Maulana Ahmed Ali', 'شیخ مولانا احمد علی')}</p>
-                  <p className="text-[#27B5E8] font-medium">{t('Principal & Senior Scholar, Faiz ul Hasnain Foundation', 'پرنسپل اور سینئر عالم، فیض الحسنین فاؤنڈیشن')}</p>
+                  <p className="text-[#27B5E8] font-medium">{t('Principal & Senior Scholar, Abu Bakar Foundation', 'پرنسپل اور سینئر عالم، ابوبکر فاؤنڈیشن')}</p>
                 </div>
               </motion.div>
             </div>

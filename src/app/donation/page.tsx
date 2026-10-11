@@ -35,7 +35,7 @@ const Donation = () => {
 
    const bankDetails = [
       { label: t('Bank Name', 'بینک کا نام'), value: t('Ujjivan Small Finance Bank', 'اجیون سمال فنانس بینک') },
-      { label: t('Account Name', 'اکاؤنٹ کا نام'), value: t('Faijul Hasnain Foundation Nashik', 'فیض الحسنین فاؤنڈیشن ناسک') },
+      { label: t('Account Name', 'اکاؤنٹ کا نام'), value: t('Abu Bakar Foundation Nashik', 'ابوبکر فاؤنڈیشن ناسک') },
       { label: t('Account Number', 'اکاؤنٹ نمبر'), value: '4423110110055972' },
       { label: t('IFSC Code', 'آئی ایف ایس سی کوڈ'), value: 'UJVN0004423' },
    ];

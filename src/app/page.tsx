@@ -107,7 +107,7 @@ export default function Home() {
     {
       name: t('Haji Rashid Ahmed', 'حاجی راشد احمد'),
       role: t('Community Leader', 'کمیونٹی رہنما'),
-      text: t('Faiz ul Hasnain is a blessing for our community. The students here are disciplined, knowledgeable and full of Adab.', 'فیض الحسنین ہماری کمیونٹی کے لیے نعمت ہے۔ یہاں کے طلباء منظم، علم دار اور ادب سے بھرپور ہیں۔'),
+      text: t('Abu Bakar Foundation is a blessing for our community. The students here are disciplined, knowledgeable and full of Adab.', 'ابوبکر فاؤنڈیشن ہماری کمیونٹی کے لیے نعمت ہے۔ یہاں کے طلباء منظم، علم دار اور ادب سے بھرپور ہیں۔'),
       initials: 'HR',
       color: 'bg-[#F28C28]',
     },
@@ -227,7 +227,7 @@ export default function Home() {
                   {t('Est. 2024 — Nashik, India', 'قائم شدہ 2024 — ناشک، ہندوستان')}
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-black text-[#0B3D91] leading-tight">
-                  {t('Welcome to', 'فیض الحسنین')} <span className="text-[#53B32E]">{t('Faiz ul Hasnain', 'فاؤنڈیشن میں')}</span><br />{t('Foundation', 'خوش آمدید')}
+                  {t('Welcome to', 'ابوبکر')} <span className="text-[#53B32E]">{t('Abu Bakar', 'فاؤنڈیشن میں')}</span><br />{t('Foundation', 'خوش آمدید')}
                 </h2>
                 <p className="text-zinc-600 text-lg leading-relaxed">
                   {t(
@@ -275,7 +275,7 @@ export default function Home() {
             >
               <div className="absolute inset-0 bg-[#1E5DBB] rounded-3xl rotate-3 -z-10"></div>
               <div className="relative overflow-hidden rounded-3xl shadow-2xl border-4 border-white aspect-[4/3]">
-                <Image src="/madrasa-campus.jpg" alt="Faiz ul Hasnain Foundation Campus" fill className="object-cover" />
+                <Image src="/madrasa-campus.jpg" alt="Abu Bakar Foundation Campus" fill className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B3D91]/70 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/20 backdrop-blur-md rounded-2xl px-5 py-4 border border-white/30">
@@ -402,7 +402,7 @@ export default function Home() {
           >
             <span className="inline-block text-[#7ED321] font-bold tracking-widest uppercase text-xs mb-3">{t('Why Us', 'ہمیں کیوں')}</span>
             <h2 className="font-display text-4xl md:text-5xl font-black text-white mb-4">
-              {t('Why Choose Faiz ul Hasnain?', 'فیض الحسنین کیوں چنیں؟')}
+              {t('Why Choose Abu Bakar Foundation?', 'ابوبکر فاؤنڈیشن کیوں چنیں؟')}
             </h2>
             <p className="text-blue-200/80 text-lg max-w-2xl mx-auto">
               {t("Our institution stands apart through our commitment to authentic Islamic education and holistic student development.", "ہمارا ادارہ مستند اسلامی تعلیم اور جامع طلبا کی ترقی کے لیے اپنے عزم کے ذریعے الگ نظر آتا ہے۔")}
