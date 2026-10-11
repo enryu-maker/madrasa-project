@@ -2,14 +2,14 @@
 
 export type Pair = [en: string, ur: string];
 
-export const PHONE = '+91 6306866039';
+export const PHONE = '+91 00000 00000';
 export const EMAIL = 'info@abubakarfoundation.org';
-export const UPI_ID = 'UJJ80621812381@Ujjivan';
-export const PAYEE = 'Abu Bakar Foundation Nashik';
+export const UPI_ID = 'yourname@upi';
+export const PAYEE = 'Abu Bakar Foundation';
 
 export const ADDRESS: Pair = [
-  'Plot No: 39, Gat No: 8A/8B, Kedarnath Colony, Virat Sankul, Sanjiv Nagar, Ambad Link Road, Nashik, Maharashtra, India',
-  'پلاٹ نمبر: 39، گٹ نمبر: 8A/8B، کیدارناتھ کالونی، وراٹ سنکل، سنجیو نگر، امباد لنک روڈ، ناشک، مہاراشٹر، بھارت',
+  '123 Sample Street, Your Area, Your City, Your State',
+  '123 سیمپل اسٹریٹ، آپ کا علاقہ، آپ کا شہر، آپ کی ریاست',
 ];
 export const HOURS: Pair = ['Monday – Saturday, 9:00 AM – 6:00 PM', 'پیر تا ہفتہ، صبح 9 تا شام 6'];
 
@@ -22,10 +22,10 @@ export const upiLink = (amount?: number) =>
   (amount && amount >= 1 ? `&am=${Math.floor(amount)}` : '');
 
 export const BANK: { label: Pair; value: string }[] = [
-  { label: ['Bank', 'بینک'], value: 'Ujjivan Small Finance Bank' },
+  { label: ['Bank', 'بینک'], value: 'Sample Bank' },
   { label: ['Account name', 'اکاؤنٹ کا نام'], value: PAYEE },
-  { label: ['Account number', 'اکاؤنٹ نمبر'], value: '4423110110055972' },
-  { label: ['IFSC code', 'آئی ایف ایس سی کوڈ'], value: 'UJVN0004423' },
+  { label: ['Account number', 'اکاؤنٹ نمبر'], value: '0000 0000 0000 0000' },
+  { label: ['IFSC code', 'آئی ایف ایس سی کوڈ'], value: 'SMPL0000000' },
 ];
 
 export const STATS: { value: string; label: Pair }[] = [
@@ -78,18 +78,18 @@ export const EVENTS: { day: string; month: Pair; title: Pair; place: Pair }[] = 
     day: '26',
     month: ['January 2026', 'جنوری 2026'],
     title: ['Urs-e-Vakeel Ahmad Shah Conference', 'عرسِ وکیل احمد شاہ کانفرنس'],
-    place: ['Virat Sankul, Sanjiv Nagar, Nashik', 'وراٹ سنکل، سنجیو نگر، ناشک'],
+    place: ['Venue Name, Your City', 'مقام کا نام، آپ کا شہر'],
   },
   {
     day: '10',
     month: ['October 2025', 'اکتوبر 2025'],
     title: ['Jashn-e-Gous ul Wara', 'جشنِ غوث الوریٰ'],
-    place: ['Virat Sankul, Sanjiv Nagar, Nashik', 'وراٹ سنکل، سنجیو نگر، ناشک'],
+    place: ['Venue Name, Your City', 'مقام کا نام، آپ کا شہر'],
   },
   {
     day: '29',
     month: ['June 2025', 'جون 2025'],
     title: ['Shaheedain Conference', 'شہیدین کانفرنس'],
-    place: ['Noori Masjid, Ambad Link Road, Nashik', 'نوری مسجد، امباد لنک روڈ، ناشک'],
+    place: ['Venue Name, Your City', 'مقام کا نام، آپ کا شہر'],
   },
 ];

@@ -21,7 +21,7 @@ export default function Home() {
           <div>
             <p className="eyebrow flex items-center gap-3 text-gold">
               <span className="khatam" aria-hidden="true" />
-              {t('Madrasa · Nashik, Maharashtra', 'مدرسہ · ناشک، مہاراشٹر')}
+              {t('Madrasa · Your City, Your State', 'مدرسہ · آپ کا شہر، آپ کی ریاست')}
             </p>
             <p lang="ar" dir="rtl" className="arabic mt-8 text-left text-[clamp(2.25rem,5.4vw,4rem)] text-gold rtl:text-right">
               خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ
@@ -34,8 +34,8 @@ export default function Home() {
             </p>
             <p className="lede mt-8 max-w-xl text-white/85">
               {t(
-                'Abu Bakar Foundation is a madrasa in Nashik. We teach Quran, Hifz and the Islamic sciences, and we keep the fees low enough that any family can send a child. Donations are what make that possible.',
-                'ابوبکر فاؤنڈیشن ناشک کا ایک مدرسہ ہے۔ ہم قرآن، حفظ اور دینی علوم پڑھاتے ہیں، اور فیس اتنی کم رکھتے ہیں کہ کوئی بھی گھرانہ اپنے بچے کو بھیج سکے۔ یہ آپ کے عطیات سے ممکن ہوتا ہے۔'
+                'Abu Bakar Foundation is a madrasa in Your City. We teach Quran, Hifz and the Islamic sciences, and we keep the fees low enough that any family can send a child. Donations are what make that possible.',
+                'ابوبکر فاؤنڈیشن آپ کے شہر کا ایک مدرسہ ہے۔ ہم قرآن، حفظ اور دینی علوم پڑھاتے ہیں، اور فیس اتنی کم رکھتے ہیں کہ کوئی بھی گھرانہ اپنے بچے کو بھیج سکے۔ یہ آپ کے عطیات سے ممکن ہوتا ہے۔'
               )}
             </p>
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 font-semibold">
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="wrap grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <p className="eyebrow text-emerald">{t('Since 2024', '2024 سے')}</p>
-            <h2 className="display d2 mt-3">{t('A madrasa in Sanjiv Nagar, Nashik', 'سنجیو نگر، ناشک کا ایک مدرسہ')}</h2>
+            <h2 className="display d2 mt-3">{t('A madrasa in Your Area, Your City', 'آپ کے علاقے، آپ کے شہر کا ایک مدرسہ')}</h2>
           </div>
           <div>
             <p>

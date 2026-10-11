@@ -10,7 +10,7 @@ export default function OurInstitution() {
   const { t } = useLanguage();
 
   const milestones = [
-    { year: '2024', label: t('Madrasa opened', 'مدرسہ قائم ہوا'), detail: t('The first batch started in Nashik.', 'ناشک میں پہلا بیچ شروع ہوا۔') },
+    { year: '2024', label: t('Madrasa opened', 'مدرسہ قائم ہوا'), detail: t('The first batch started in Your City.', 'آپ کے شہر میں پہلا بیچ شروع ہوا۔') },
     { year: '2024', label: t('Hifz department', 'شعبہ حفظ'), detail: t('Hifz classes began under qualified huffaz.', 'مستند حفاظ کی نگرانی میں حفظ کی کلاسیں شروع ہوئیں۔') },
     { year: '2025', label: t('Department for girls', 'شعبہ طالبات'), detail: t('A separate department for girls opened, with women teachers.', 'خواتین اساتذہ کے ساتھ طالبات کا علیحدہ شعبہ کھلا۔') },
     { year: '2026', label: t('2,000+ students', '2,000 سے زائد طلباء'), detail: t('More than 2,000 students enrolled.', '2,000 سے زائد طلباء داخل ہو چکے ہیں۔') },
@@ -87,7 +87,7 @@ export default function OurInstitution() {
             <h2 className="display d2 mt-3">{t('What kind of madrasa we are', 'ہم کس طرح کا مدرسہ ہیں')}</h2>
           </div>
           <div className="space-y-5">
-            <p>{t('Abu Bakar Foundation opened in 2024 in Nashik, Maharashtra. Students of any background can enrol.', 'ابوبکر فاؤنڈیشن 2024 میں ناشک، مہاراشٹر میں قائم ہوئی۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔')}</p>
+            <p>{t('Abu Bakar Foundation opened in 2024 in Your City, Your State. Students of any background can enrol.', 'ابوبکر فاؤنڈیشن 2024 میں آپ کے شہر، آپ کی ریاست میں قائم ہوئی۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔')}</p>
             <p>{t('We want students who are firm in their deen, able in their studies and well-mannered.', 'ہم چاہتے ہیں کہ ہمارے طلباء دین میں پختہ، پڑھائی میں قابل اور بااخلاق ہوں۔')}</p>
             <p>{t('Tarbiyah matters to us as much as lessons do: how a student prays, speaks and treats people.', 'ہمارے نزدیک تربیت اتنی ہی اہم ہے جتنا سبق: طالب علم نماز کیسے پڑھتا ہے، کیسے بات کرتا ہے اور لوگوں سے کیسا برتاؤ کرتا ہے۔')}</p>
           </div>

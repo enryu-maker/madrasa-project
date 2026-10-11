@@ -19,8 +19,8 @@ const About = () => {
         eyebrow={t('About us', 'ہمارے بارے میں')}
         title={t('About the madrasa', 'مدرسے کے بارے میں')}
         lede={t(
-          'Abu Bakar Foundation opened in Nashik in 2024.',
-          'ابوبکر فاؤنڈیشن 2024 میں ناشک میں قائم ہوئی۔'
+          'Abu Bakar Foundation opened in Your City in 2024.',
+          'ابوبکر فاؤنڈیشن 2024 میں آپ کے شہر میں قائم ہوئی۔'
         )}
       />
 

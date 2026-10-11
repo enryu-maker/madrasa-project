@@ -67,8 +67,8 @@ const Contact = () => {
       </section>
 
       <iframe
-        title={t('Map of Nashik', 'ناشک کا نقشہ')}
-        src="https://maps.google.com/maps?q=Sanjiv+Nagar,+Ambad+Link+Road,+Nashik,+Maharashtra&z=14&output=embed"
+        title={t('Map', 'نقشہ')}
+        src="https://maps.google.com/maps?q=India&z=4&output=embed"
         className="block h-96 w-full border-0"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

@@ -76,7 +76,7 @@ const Footer = () => {
 
       <div className="border-t border-white/15">
         <p className="wrap py-5 pr-24 text-sm text-white/55">
-          © {new Date().getFullYear()} {t('Abu Bakar Foundation, Nashik. All rights reserved.', 'ابوبکر فاؤنڈیشن، ناشک۔ جملہ حقوق محفوظ ہیں۔')}
+          © {new Date().getFullYear()} {t('Abu Bakar Foundation, Your City. All rights reserved.', 'ابوبکر فاؤنڈیشن، آپ کا شہر۔ جملہ حقوق محفوظ ہیں۔')}
         </p>
       </div>
     </footer>
