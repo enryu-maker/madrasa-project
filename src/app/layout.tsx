@@ -1,48 +1,35 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import { Amiri, Hind, Marcellus, Noto_Nastaliq_Urdu } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import Providers from '@/components/Providers';
-import { Toaster } from 'sonner';
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'],
-  display: 'swap',
-});
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const marcellus = Marcellus({ variable: '--font-marcellus', subsets: ['latin'], weight: '400' });
+const hind = Hind({ variable: '--font-hind', subsets: ['latin'], weight: ['400', '500', '600'] });
+const amiri = Amiri({ variable: '--font-amiri', subsets: ['arabic'], weight: '400' });
+// Only needed once a visitor switches to Urdu, so it is not preloaded.
+const nastaliq = Noto_Nastaliq_Urdu({ variable: '--font-nastaliq', subsets: ['arabic'], preload: false });
 
 export const metadata: Metadata = {
-  title: 'Abu Bakar Foundation — Authentic Islamic Education | Nashik, India',
-  description: 'A trusted Islamic educational institution dedicated to nurturing Deen, character, Quran, and academic excellence. Campus & Online programs available.',
-  keywords: 'Islamic education, Quran, Hifz, Dars-e-Nizami, Nashik, Madrasa, online Quran classes',
+  title: 'Abu Bakar Foundation — Madrasa in Nashik | Quran, Hifz & Islamic Education',
+  description: 'Abu Bakar Foundation is a madrasa in Nashik, India teaching Quran, Hifz and the Islamic sciences at fees families can afford. Donate by UPI or bank transfer.',
+  keywords: 'Islamic education, Quran, Hifz, Dars-e-Nizami, Nashik, Madrasa, donate, zakat, sadaqah',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+    <html lang="en" suppressHydrationWarning className={`${marcellus.variable} ${hind.variable} ${amiri.variable} ${nastaliq.variable} h-full`}>
+      <body className="min-h-full">
         <Providers>
-          <Navbar />
-          <main className="flex-1 pt-16 md:pt-20">
-            {children}
-          </main>
-          <Footer />
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
           <WhatsAppButton />
-          <Toaster richColors position="top-right" />
         </Providers>
       </body>
     </html>

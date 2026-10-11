@@ -1,119 +1,93 @@
 "use client";
 
+import { FormEvent } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { motion, Variants } from 'framer-motion';
-import { useForm } from 'react-hook-form';
-import { toast } from 'sonner';
-import { User, Phone, Mail, Book, MessageSquare, Send, CheckCircle2, ShieldCheck, HelpCircle } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import Link from 'next/link';
-
-const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0,
-    transition: { delay: Number(i) * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] as any }
-  }),
-};
+import PageHeader from '@/components/PageHeader';
+import { PROGRAMS, whatsapp } from '@/lib/site';
 
 const AdmissionPage = () => {
   const { t } = useLanguage();
-  const { register, handleSubmit, reset, formState: { isSubmitting } } = useForm();
 
-  const onSubmit = async (data: any) => {
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    toast.success(t('Application Submitted Successfully!', 'درخواست کامیابی کے ساتھ جمع کر دی گئی ہے!'), {
-      description: t('Our representative will contact you shortly.', 'ہمارا نمائندہ جلد ہی آپ سے رابطہ کرے گا۔'),
-    });
-    reset();
+  // There is no server behind this site, so the application is handed to WhatsApp, where the office reads it.
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const d = new FormData(e.currentTarget);
+    window.open(
+      whatsapp(
+        `Assalamu alaikum, I would like to apply for admission.\n` +
+        `Student: ${d.get('fullName')}\n` +
+        `Father's name: ${d.get('fatherName')}\n` +
+        `Program: ${d.get('program')}\n` +
+        `Phone: ${d.get('phone')}`
+      ),
+      '_blank',
+      'noopener'
+    );
   };
 
+  const steps = [
+    { title: t('Send the form', 'فارم بھیجیں'), desc: t('Fill it in below. WhatsApp opens with your details; press send.', 'نیچے فارم پُر کریں۔ واٹس ایپ آپ کی تفصیلات کے ساتھ کھلے گا؛ بھیج دیں۔') },
+    { title: t('Short interview', 'مختصر انٹرویو'), desc: t('One of our teachers meets the student.', 'ہمارے ایک استاد طالب علم سے ملتے ہیں۔') },
+    { title: t('Documents', 'کاغذات'), desc: t('Bring the documents we ask for.', 'جو کاغذات ہم مانگیں وہ ساتھ لائیں۔') },
+    { title: t('First day', 'پہلا دن'), desc: t('We show the student around and classes begin.', 'ہم طالب علم کو مدرسہ دکھاتے ہیں اور کلاسیں شروع ہو جاتی ہیں۔') },
+  ];
+
   return (
-    <div className="flex flex-col">
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-white dark:bg-zinc-950">
-        <div className="absolute inset-0 bg-linear-to-b from-sky-50/50 to-white dark:from-sky-950/20 -z-10"></div>
-        <div className="container mx-auto px-6 text-center">
-           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
-              <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-amber-100 text-amber-700 text-xs font-black tracking-widest uppercase mb-6 border border-amber-200">
-                {t('Enrolling for 2026', 'برائے سال 2026')}
-              </span>
-              <h1 className="font-display text-5xl md:text-7xl font-black text-sky-900 dark:text-white mb-6">
-                {t('Join Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن میں شامل ہوں')}
-              </h1>
-              <p className="text-zinc-600 dark:text-zinc-400 text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-                {t(
-                  'Begin your spiritual and academic journey today. Fill out the form below to start your application process.',
-                  'آج ہی اپنا روحانی اور تعلیمی سفر شروع کریں۔ اپنا درخواست کا عمل شروع کرنے کے لیے نیچے والا فارم پُر کریں۔'
-                )}
-              </p>
-           </motion.div>
-        </div>
-      </section>
+    <>
+      <PageHeader
+        eyebrow={t('Enrolling for 2026', 'داخلے برائے 2026')}
+        title={t('Admissions', 'داخلہ')}
+        lede={t(
+          'For children, young people and adults. Fees are low; ask us what the fee is for your course.',
+          'بچوں، نوجوانوں اور بڑوں کے لیے۔ فیس کم ہے؛ اپنے کورس کی فیس ہم سے پوچھ لیں۔'
+        )}
+      />
 
-      <section className="section-padding bg-zinc-50/50 dark:bg-zinc-900/30 overflow-hidden">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-10 items-start">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={1} className="space-y-6">
-                <div className="bg-white dark:bg-zinc-900 p-8 rounded-[2.5rem] border border-zinc-100 dark:border-zinc-800 shadow-xl shadow-zinc-200/50">
-                   <h3 className="font-display text-2xl font-bold mb-6 text-zinc-900 dark:text-white">{t('Admission Process', 'داخلہ کا طریقہ کار')}</h3>
-                   <div className="space-y-6">
-                      {[
-                        { title: t('Online Registration', 'آن لائن رجسٹریشن'), desc: t('Submit the form on this page.', 'اس صفحے پر فارم جمع کروائیں۔') },
-                        { title: t('Initial Interview', 'ابتدائی انٹرویو'), desc: t('Short online assessment with faculty.', 'فیکلٹی کے ساتھ مختصر آن لائن جائزہ۔') },
-                        { title: t('Verification', 'تصدیق'), desc: t('Submission of required documents.', 'مطلوبہ دستاویزات کی جمع آوری۔') },
-                        { title: t('Orientation', 'آگاہی پروگرام'), desc: t('Welcome to the Abu Bakar Foundation family.', 'ابوبکر فاؤنڈیشن خاندان میں خوش آمدید۔') },
-                      ].map((step, i) => (
-                        <div key={i} className="flex gap-4">
-                           <div className="w-8 h-8 rounded-full gradient-primary flex items-center justify-center text-white text-xs font-bold shrink-0">
-                              {i+1}
-                           </div>
-                           <div>
-                              <p className="font-bold text-zinc-900 dark:text-white text-sm">{step.title}</p>
-                              <p className="text-xs text-zinc-500">{step.desc}</p>
-                           </div>
-                        </div>
-                      ))}
-                   </div>
-                </div>
-            </motion.div>
-
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={2} className="bg-white dark:bg-zinc-900 p-10 md:p-16 rounded-4xl border border-zinc-100 dark:border-zinc-800 shadow-3xl shadow-zinc-200/50">
-               <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <Label htmlFor="fullName" className="font-bold text-zinc-700 dark:text-zinc-300 ml-1">{t('Full Name', 'مکمل نام')}</Label>
-                      <Input id="fullName" {...register('fullName', { required: true })} className="h-14 rounded-2xl border-zinc-100 bg-zinc-50/50 dark:bg-zinc-800" />
-                    </div>
-                    <div className="space-y-3">
-                      <Label htmlFor="fatherName" className="font-bold text-zinc-700 dark:text-zinc-300 ml-1">{t("Father's Name", 'والد کا نام')}</Label>
-                      <Input id="fatherName" {...register('fatherName', { required: true })} className="h-14 rounded-2xl border-zinc-100 bg-zinc-50/50 dark:bg-zinc-800" />
-                    </div>
+      <section className="py-16 md:py-24">
+        <div className="wrap grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
+          <div>
+            <h2 className="display d2">{t('How admission works', 'داخلہ کیسے ہوتا ہے')}</h2>
+            <ol className="mt-8 space-y-6">
+              {steps.map((step, i) => (
+                <li key={step.title} className="flex gap-4">
+                  <span className="display text-2xl text-emerald" dir="ltr">{i + 1}</span>
+                  <div>
+                    <h3 className="font-semibold">{step.title}</h3>
+                    <p className="text-soft">{step.desc}</p>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-3">
-                      <Label htmlFor="phone" className="font-bold text-zinc-700 dark:text-zinc-300 ml-1">{t('WhatsApp Number', 'واٹس ایپ نمبر')}</Label>
-                      <Input id="phone" {...register('phone', { required: true })} className="h-14 rounded-2xl border-zinc-100 bg-zinc-50/50" />
-                    </div>
-                    <div className="space-y-3">
-                      <Label htmlFor="email" className="font-bold text-zinc-700 dark:text-zinc-300 ml-1">{t('Email Address', 'ای میل ایڈریس')}</Label>
-                      <Input id="email" type="email" {...register('email')} className="h-14 rounded-2xl border-zinc-100 bg-zinc-50/50" />
-                    </div>
-                  </div>
-                  <div className="pt-6">
-                    <Button disabled={isSubmitting} className="w-full h-16 rounded-4xl gradient-primary text-white font-bold text-lg">
-                      {isSubmitting ? t('Processing...', 'عمل ہو رہا ہے...') : t('Submit Application', 'درخواست جمع کروائیں')}
-                    </Button>
-                  </div>
-               </form>
-            </motion.div>
+                </li>
+              ))}
+            </ol>
           </div>
+
+          <form onSubmit={onSubmit} className="space-y-5 rounded-xl border border-line bg-chalk p-6 md:p-8">
+            <h2 className="display d3">{t('Application', 'درخواست')}</h2>
+            <label className="block font-medium">
+              {t("Student's full name", 'طالب علم کا مکمل نام')}
+              <input name="fullName" required autoComplete="name" className="field mt-1" />
+            </label>
+            <label className="block font-medium">
+              {t("Father's name", 'والد کا نام')}
+              <input name="fatherName" required className="field mt-1" />
+            </label>
+            <label className="block font-medium">
+              {t('Program', 'پروگرام')}
+              <select name="program" required className="field mt-1" defaultValue="">
+                <option value="" disabled>{t('Choose a program', 'پروگرام منتخب کریں')}</option>
+                {PROGRAMS.map(p => (
+                  <option key={p.title[0]} value={p.title[0]}>{t(...p.title)}</option>
+                ))}
+              </select>
+            </label>
+            <label className="block font-medium">
+              {t('WhatsApp number', 'واٹس ایپ نمبر')}
+              <input name="phone" type="tel" required autoComplete="tel" dir="ltr" className="field mt-1" />
+            </label>
+            <button className="btn btn-green w-full">{t('Send application on WhatsApp', 'واٹس ایپ پر درخواست بھیجیں')}</button>
+          </form>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

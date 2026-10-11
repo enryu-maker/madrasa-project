@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
 
 type Language = 'en' | 'ur';
@@ -24,9 +24,14 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const t = useCallback((en: string, ur: string) => lang === 'en' ? en : ur, [lang]);
   const dir = lang === 'ur' ? 'rtl' : 'ltr';
 
+  // Screen readers and the browser's own translation prompt read the language from <html>.
+  useEffect(() => {
+    document.documentElement.lang = lang;
+  }, [lang]);
+
   return (
     <LanguageContext.Provider value={{ lang, toggleLang, t, dir }}>
-      <div dir={dir} className={lang === 'ur' ? 'font-arabic' : 'font-body'}>
+      <div dir={dir}>
         {children}
       </div>
     </LanguageContext.Provider>
