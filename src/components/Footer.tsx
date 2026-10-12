@@ -25,10 +25,10 @@ const Footer = () => {
       <div className="wrap py-14 md:py-16">
         <div className="flex flex-col gap-8 border-b border-white/15 pb-10 md:flex-row md:items-center md:justify-between">
           <Link href="/" className="flex items-center gap-4">
-            <Image src="/logo.jpg" alt="" width={64} height={64} className="h-16 w-16 rounded-lg bg-white object-contain" />
+            <Image src="/logo.png" alt="" width={512} height={468} className="h-16 w-16 rounded-lg bg-white object-contain" />
             <span>
-              <span className="display block text-2xl text-white md:text-3xl">{t('Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن')}</span>
-              <span className="block text-gold">{t('Our Mission, Our Identity', 'ہمارا مشن ہماری پہچان')}</span>
+              <span className="display block text-2xl text-white md:text-3xl">{t('Siddique Akbar Trust', 'صدیق اکبر ٹرسٹ')}</span>
+              <span className="block text-gold">{t('Quran, Hifz and Islamic education', 'قرآن، حفظ اور دینی تعلیم')}</span>
             </span>
           </Link>
           <div className="flex flex-wrap gap-3">
@@ -75,8 +75,9 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-white/15">
-        <p className="wrap py-5 pr-24 text-sm text-white/55">
-          © {new Date().getFullYear()} {t('Abu Bakar Foundation, Your City. All rights reserved.', 'ابوبکر فاؤنڈیشن، آپ کا شہر۔ جملہ حقوق محفوظ ہیں۔')}
+        <p className="wrap flex flex-wrap justify-between gap-x-6 gap-y-1 py-5 pr-24 text-sm text-white/55">
+          © {new Date().getFullYear()} {t('Siddique Akbar Trust, Your City. All rights reserved.', 'صدیق اکبر ٹرسٹ، آپ کا شہر۔ جملہ حقوق محفوظ ہیں۔')}
+          <span dir="ltr">Made with ❤️ by <a href="https://nerdtech.in" target="_blank" rel="noopener" className="underline hover:text-white">NerdTech</a></span>
         </p>
       </div>
     </footer>

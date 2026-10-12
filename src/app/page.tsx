@@ -34,8 +34,8 @@ export default function Home() {
             </p>
             <p className="lede mt-8 max-w-xl text-white/85">
               {t(
-                'Abu Bakar Foundation is a madrasa in Your City. We teach Quran, Hifz and the Islamic sciences, and we keep the fees low enough that any family can send a child. Donations are what make that possible.',
-                'ابوبکر فاؤنڈیشن آپ کے شہر کا ایک مدرسہ ہے۔ ہم قرآن، حفظ اور دینی علوم پڑھاتے ہیں، اور فیس اتنی کم رکھتے ہیں کہ کوئی بھی گھرانہ اپنے بچے کو بھیج سکے۔ یہ آپ کے عطیات سے ممکن ہوتا ہے۔'
+                'Siddique Akbar Trust is a madrasa in Your City. We teach Quran, Hifz and the Islamic sciences, and we keep the fees low enough that any family can send a child. Donations are what make that possible.',
+                'صدیق اکبر ٹرسٹ آپ کے شہر کا ایک مدرسہ ہے۔ ہم قرآن، حفظ اور دینی علوم پڑھاتے ہیں، اور فیس اتنی کم رکھتے ہیں کہ کوئی بھی گھرانہ اپنے بچے کو بھیج سکے۔ یہ آپ کے عطیات سے ممکن ہوتا ہے۔'
               )}
             </p>
             <div className="mt-8 flex flex-wrap gap-x-8 gap-y-3 font-semibold">
@@ -132,7 +132,7 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/admission" className="btn btn-gold">{t('Apply for admission', 'داخلے کے لیے درخواست دیں')}</Link>
               <a
-                href={whatsapp('Assalamu alaikum, I would like to know the fees at Abu Bakar Foundation.')}
+                href={whatsapp('Assalamu alaikum, I would like to know the fees at Siddique Akbar Trust.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-line"

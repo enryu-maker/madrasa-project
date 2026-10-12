@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { UPI_ID, upiLink } from '@/lib/site';
@@ -70,14 +71,13 @@ const DonateBox = ({ showBankLink = true }: { showBankLink?: boolean }) => {
 
         {/* Computer: scan with a phone */}
         <div className="mouse-only mt-6 rounded-xl bg-chalk p-5 text-center">
-          {/* Demo placeholder: swap for the real QR image before launch */}
-          <div
-            role="img"
-            aria-label={t('UPI QR code for donations', 'عطیات کے لیے یو پی آئی کیو آر کوڈ')}
-            className="mx-auto grid h-44 w-44 place-items-center rounded-lg border-2 border-dashed border-line bg-white text-sm text-soft"
-          >
-            {t('QR code', 'کیو آر کوڈ')}
-          </div>
+          <Image
+            src="/upi-qr.jpg"
+            alt={t('UPI QR code for donations', 'عطیات کے لیے یو پی آئی کیو آر کوڈ')}
+            width={580}
+            height={530}
+            className="mx-auto h-auto w-44 rounded-lg bg-white"
+          />
           <p className="mt-4 font-semibold">{t('Scan with any UPI app', 'کسی بھی یو پی آئی ایپ سے اسکین کریں')}</p>
           <p className="text-sm text-soft" dir="ltr">GPay · PhonePe · Paytm · BHIM</p>
         </div>

@@ -14,8 +14,8 @@ const amiri = Amiri({ variable: '--font-amiri', subsets: ['arabic'], weight: '40
 const nastaliq = Noto_Nastaliq_Urdu({ variable: '--font-nastaliq', subsets: ['arabic'], preload: false });
 
 export const metadata: Metadata = {
-  title: 'Abu Bakar Foundation — Madrasa in Your City | Quran, Hifz & Islamic Education',
-  description: 'Abu Bakar Foundation is a madrasa in Your City teaching Quran, Hifz and the Islamic sciences at fees families can afford. Donate by UPI or bank transfer.',
+  title: 'Siddique Akbar Trust — Madrasa in Your City | Quran, Hifz & Islamic Education',
+  description: 'Siddique Akbar Trust is a madrasa in Your City teaching Quran, Hifz and the Islamic sciences at fees families can afford. Donate by UPI or bank transfer.',
   keywords: 'Islamic education, Quran, Hifz, Dars-e-Nizami, Madrasa, donate, zakat, sadaqah',
 };
 

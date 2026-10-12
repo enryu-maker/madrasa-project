@@ -25,9 +25,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-line bg-white">
       <div className="wrap flex h-16 items-center justify-between gap-3">
         <Link href="/" className="flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
-          <Image src="/logo.jpg" alt="" width={44} height={44} className="h-11 w-11 shrink-0 rounded-md object-contain" priority />
+          <Image src="/logo.png" alt="" width={512} height={468} className="h-11 w-11 shrink-0 rounded-md object-contain" priority />
           <span className="display text-base leading-[1.15] text-navy sm:text-lg">
-            {t('Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن')}
+            {t('Siddique Akbar Trust', 'صدیق اکبر ٹرسٹ')}
           </span>
         </Link>
 

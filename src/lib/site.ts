@@ -2,14 +2,14 @@
 
 export type Pair = [en: string, ur: string];
 
-export const PHONE = '+91 00000 00000';
+export const PHONE = '+91 8055108635';
 export const EMAIL = 'info@abubakarfoundation.org';
-export const UPI_ID = 'yourname@upi';
-export const PAYEE = 'Abu Bakar Foundation';
+export const UPI_ID = 'jamiasiddhiqe@srcb';
+export const PAYEE = 'Jamia Siddhiqe Akbar Ahale Sunnat Trust';
 
 export const ADDRESS: Pair = [
-  '123 Sample Street, Your Area, Your City, Your State',
-  '123 سیمپل اسٹریٹ، آپ کا علاقہ، آپ کا شہر، آپ کی ریاست',
+  'Ashrafi Chowk, Sanjiv Nagar, Link Road, Nashik',
+  'اشرفی چوک، سنجیو نگر، لنک روڈ، ناسک',
 ];
 export const HOURS: Pair = ['Monday – Saturday, 9:00 AM – 6:00 PM', 'پیر تا ہفتہ، صبح 9 تا شام 6'];
 
@@ -22,16 +22,15 @@ export const upiLink = (amount?: number) =>
   (amount && amount >= 1 ? `&am=${Math.floor(amount)}` : '');
 
 export const BANK: { label: Pair; value: string }[] = [
-  { label: ['Bank', 'بینک'], value: 'Sample Bank' },
+  { label: ['Bank', 'بینک'], value: 'State Bank of India' },
   { label: ['Account name', 'اکاؤنٹ کا نام'], value: PAYEE },
   { label: ['Account number', 'اکاؤنٹ نمبر'], value: '0000 0000 0000 0000' },
   { label: ['IFSC code', 'آئی ایف ایس سی کوڈ'], value: 'SMPL0000000' },
 ];
 
 export const STATS: { value: string; label: Pair }[] = [
-  { value: '2,000+', label: ['Active students', 'فعال طلباء'] },
-  { value: '50+', label: ['Qualified teachers', 'مستند اساتذہ'] },
-  { value: '500+', label: ['Alumni', 'فارغ التحصیل'] },
+  { value: '150+', label: ['Active students', 'فعال طلباء'] },
+  { value: '5+', label: ['Qualified teachers', 'مستند اساتذہ'] },
   { value: '15+', label: ['Programs', 'پروگرام'] },
 ];
 

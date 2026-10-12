@@ -44,7 +44,7 @@ const Donation = () => {
                      )}
                   </p>
                   <a
-                     href={whatsapp('Assalamu alaikum, I have made a donation to Abu Bakar Foundation.')}
+                     href={whatsapp('Assalamu alaikum, I have made a donation to Siddique Akbar Trust.')}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="btn btn-green mt-5"
@@ -83,7 +83,7 @@ const Donation = () => {
                <p className="mt-10 text-white/80">
                   {t('Giving from outside India, or need another way to pay?', 'ہندوستان سے باہر سے دے رہے ہیں، یا ادائیگی کا کوئی اور طریقہ چاہیے؟')}{' '}
                   <a
-                     href={whatsapp('Assalamu alaikum, I would like to donate to Abu Bakar Foundation and need some help.')}
+                     href={whatsapp('Assalamu alaikum, I would like to donate to Siddique Akbar Trust and need some help.')}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="font-semibold text-gold underline underline-offset-4"

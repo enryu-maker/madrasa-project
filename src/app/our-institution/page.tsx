@@ -61,7 +61,7 @@ export default function OurInstitution() {
   return (
     <>
       <PageHeader
-        eyebrow={t('Abu Bakar Foundation', 'ابوبکر فاؤنڈیشن')}
+        eyebrow={t('Siddique Akbar Trust', 'صدیق اکبر ٹرسٹ')}
         title={t('Our institution', 'ہمارا ادارہ')}
         lede={t(
           'What we teach, how we teach it, and what the campus has.',
@@ -87,7 +87,7 @@ export default function OurInstitution() {
             <h2 className="display d2 mt-3">{t('What kind of madrasa we are', 'ہم کس طرح کا مدرسہ ہیں')}</h2>
           </div>
           <div className="space-y-5">
-            <p>{t('Abu Bakar Foundation opened in 2024 in Your City, Your State. Students of any background can enrol.', 'ابوبکر فاؤنڈیشن 2024 میں آپ کے شہر، آپ کی ریاست میں قائم ہوئی۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔')}</p>
+            <p>{t('Siddique Akbar Trust opened in 2024 in Your City, Your State. Students of any background can enrol.', 'صدیق اکبر ٹرسٹ 2024 میں آپ کے شہر، آپ کی ریاست میں قائم ہوا۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔')}</p>
             <p>{t('We want students who are firm in their deen, able in their studies and well-mannered.', 'ہم چاہتے ہیں کہ ہمارے طلباء دین میں پختہ، پڑھائی میں قابل اور بااخلاق ہوں۔')}</p>
             <p>{t('Tarbiyah matters to us as much as lessons do: how a student prays, speaks and treats people.', 'ہمارے نزدیک تربیت اتنی ہی اہم ہے جتنا سبق: طالب علم نماز کیسے پڑھتا ہے، کیسے بات کرتا ہے اور لوگوں سے کیسا برتاؤ کرتا ہے۔')}</p>
           </div>
