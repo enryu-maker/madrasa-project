@@ -22,10 +22,10 @@ export const upiLink = (amount?: number) =>
   (amount && amount >= 1 ? `&am=${Math.floor(amount)}` : '');
 
 export const BANK: { label: Pair; value: string }[] = [
-  { label: ['Bank', 'بینک'], value: 'State Bank of India' },
+  { label: ['Bank', 'بینک'], value: 'Saraswat Co-Operative Bank Limited' },
   { label: ['Account name', 'اکاؤنٹ کا نام'], value: PAYEE },
-  { label: ['Account number', 'اکاؤنٹ نمبر'], value: '0000 0000 0000 0000' },
-  { label: ['IFSC code', 'آئی ایف ایس سی کوڈ'], value: 'SMPL0000000' },
+  { label: ['Account number', 'اکاؤنٹ نمبر'], value: '610000000072389' },
+  { label: ['IFSC code', 'آئی ایف ایس سی کوڈ'], value: 'SRCB0000493' },
 ];
 
 export const STATS: { value: string; label: Pair }[] = [
