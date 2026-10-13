@@ -1,14 +1,24 @@
 "use client";
 
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import DonateBox from '@/components/DonateBox';
-import EventCard from '@/components/EventCard';
-import { EVENTS, FUNDS, PROGRAMS, STATS, whatsapp } from '@/lib/site';
+import { FUNDS, PHOTOS, PROGRAMS, STATS, whatsapp } from '@/lib/site';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   const { t } = useLanguage();
+
+  // Picked after mount, so the server and the browser render the same HTML first.
+  const [picks, setPicks] = useState<typeof PHOTOS>([]);
+  useEffect(() => {
+    // ponytail: sort-by-random is a slightly uneven shuffle; use Fisher-Yates if that ever matters
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- a random pick can't be made during render without a hydration mismatch
+    setPicks([...PHOTOS].sort(() => Math.random() - 0.5).slice(0, 5));
+  }, []);
 
 
   const arrow = <ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />;
@@ -180,11 +190,32 @@ export default function Home() {
       {/* Events */}
       <section className="bg-chalk py-16 md:py-24">
         <div className="wrap">
-          <p className="eyebrow text-emerald">{t('Community', 'برادری')}</p>
-          <h2 className="display d2 mt-3">{t('Gatherings we have hosted', 'ہمارے منعقد کردہ اجتماعات')}</h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {EVENTS.map(e => <EventCard key={e.title[0]} event={e} />)}
+          <p className="eyebrow text-emerald">{t('Gallery', 'گیلری')}</p>
+          <h2 className="display d2 mt-3">{t('Life at the madrasa', 'مدرسے کی زندگی')}</h2>
+          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-5">
+            {Array.from({ length: 5 }, (_, i) => picks[i]).map((p, i) => (
+              <div
+                key={i}
+                className={cn(
+                  "relative aspect-square overflow-hidden rounded-xl bg-line",
+                  i === 0 && "max-md:col-span-2 max-md:aspect-[2/1]"
+                )}
+              >
+                {p && (
+                  <Image
+                    src={`/gallery/${p.file}.jpg`}
+                    alt={t(...p.alt)}
+                    fill
+                    sizes="(min-width: 768px) 20vw, 50vw"
+                    className="object-cover"
+                  />
+                )}
+              </div>
+            ))}
           </div>
+          <Link href="/gallery" className="mt-8 inline-flex items-center gap-2 font-semibold text-emerald underline underline-offset-8">
+            {t('See the gallery', 'گیلری دیکھیں')} {arrow}
+          </Link>
         </div>
       </section>
 
