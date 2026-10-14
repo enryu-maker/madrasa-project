@@ -91,6 +91,8 @@ export const ORGANIZATION = {
     addressRegion: 'Maharashtra',
     addressCountry: 'IN',
   },
+  geo: { '@type': 'GeoCoordinates', latitude: 19.97009, longitude: 73.72709 },
+  hasMap: 'https://www.google.com/maps/search/?api=1&query=19.97009,73.72709',
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],

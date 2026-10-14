@@ -67,11 +67,12 @@ const Contact = () => {
       </section>
 
       <iframe
-        title={t('Map', 'نقشہ')}
-        src="https://maps.google.com/maps?q=India&z=4&output=embed"
+        title={t('Map of the campus at Ashrafi Chowk, Nashik', 'اشرفی چوک، ناسک میں کیمپس کا نقشہ')}
+        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d748.3876505354697!2d73.72709035453228!3d19.97009076030122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAshrafi%20Chowk%2C%20Sanjiv%20Nagar%2C%20Link%20Road%2C%20Nashik!5e0!3m2!1sen!2sin!4v1792002197952!5m2!1sen!2sin"
         className="block h-96 w-full border-0"
+        allowFullScreen
         loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
+        referrerPolicy="strict-origin-when-cross-origin"
       />
     </>
   );
