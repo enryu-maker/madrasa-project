@@ -1,17 +1,16 @@
 "use client";
 
 import { useState } from 'react';
-import Link from 'next/link';
+import NextLink from 'next/link';
+import Link from '@/components/Link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
-  const { t, toggleLang, lang } = useLanguage();
+  const { t, lang, path, switchHref } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
 
   const links = [
     { path: '/about', label: t('About', 'ہمارے بارے میں') },
@@ -36,10 +35,10 @@ const Navbar = () => {
             <Link
               key={link.path}
               href={link.path}
-              aria-current={pathname === link.path ? 'page' : undefined}
+              aria-current={path === link.path ? 'page' : undefined}
               className={cn(
                 "border-b-2 py-1 text-[0.9375rem] font-medium transition-colors hover:text-emerald",
-                pathname === link.path ? "border-gold text-emerald" : "border-transparent"
+                path === link.path ? "border-gold text-emerald" : "border-transparent"
               )}
             >
               {link.label}
@@ -48,13 +47,14 @@ const Navbar = () => {
         </div>
 
         <div className="flex shrink-0 items-center gap-2">
-          <button
-            onClick={toggleLang}
-            className="hidden min-h-11 rounded-lg px-3 text-sm font-semibold text-emerald hover:bg-chalk sm:block"
+          <NextLink
+            href={switchHref}
+            hrefLang={lang === 'en' ? 'ur' : 'en'}
             lang={lang === 'en' ? 'ur' : 'en'}
+            className="hidden min-h-11 items-center rounded-lg px-3 text-sm font-semibold text-emerald hover:bg-chalk sm:flex"
           >
             {lang === 'en' ? 'اردو' : 'English'}
-          </button>
+          </NextLink>
           <Link href="/donation" className="btn btn-gold min-h-11 px-5" onClick={() => setIsOpen(false)}>
             {t('Donate', 'عطیہ دیں')}
           </Link>
@@ -76,18 +76,24 @@ const Navbar = () => {
               key={link.path}
               href={link.path}
               onClick={() => setIsOpen(false)}
-              aria-current={pathname === link.path ? 'page' : undefined}
+              aria-current={path === link.path ? 'page' : undefined}
               className={cn(
                 "block border-b border-line py-3 font-medium",
-                pathname === link.path && "text-emerald"
+                path === link.path && "text-emerald"
               )}
             >
               {link.label}
             </Link>
           ))}
-          <button onClick={toggleLang} className="mt-3 min-h-11 font-semibold text-emerald sm:hidden">
+          <NextLink
+            href={switchHref}
+            hrefLang={lang === 'en' ? 'ur' : 'en'}
+            lang={lang === 'en' ? 'ur' : 'en'}
+            onClick={() => setIsOpen(false)}
+            className="mt-3 flex min-h-11 items-center font-semibold text-emerald sm:hidden"
+          >
             {lang === 'en' ? 'اردو میں پڑھیں' : 'Read in English'}
-          </button>
+          </NextLink>
         </div>
       )}
     </nav>

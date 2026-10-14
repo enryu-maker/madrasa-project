@@ -1,25 +1,29 @@
 "use client";
 
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useCallback, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import { localize, type Language } from '@/lib/site';
 
 
-type Language = 'en' | 'ur';
 
 interface LanguageContextType {
   lang: Language;
-  toggleLang: () => void;
   t: (en: string, ur: string) => string;
   dir: 'ltr' | 'rtl';
+  /** The current page without the /ur prefix, e.g. '/about'. */
+  path: string;
+  /** The same page in the other language. */
+  switchHref: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLang] = useState<Language>('en');
-
-  const toggleLang = useCallback(() => {
-    setLang(prev => prev === 'en' ? 'ur' : 'en');
-  }, []);
+  // Urdu pages live under /ur, so the language comes from the URL and the server renders the right one.
+  const pathname = usePathname() ?? '/';
+  const lang: Language = /^\/ur(\/|$)/.test(pathname) ? 'ur' : 'en';
+  const path = lang === 'ur' ? pathname.slice(3) || '/' : pathname;
+  const switchHref = lang === 'ur' ? path : localize(path, 'ur');
 
   const t = useCallback((en: string, ur: string) => lang === 'en' ? en : ur, [lang]);
   const dir = lang === 'ur' ? 'rtl' : 'ltr';
@@ -30,8 +34,8 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [lang]);
 
   return (
-    <LanguageContext.Provider value={{ lang, toggleLang, t, dir }}>
-      <div dir={dir}>
+    <LanguageContext.Provider value={{ lang, t, dir, path, switchHref }}>
+      <div dir={dir} lang={lang}>
         {children}
       </div>
     </LanguageContext.Provider>

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import PageHeader from '@/components/PageHeader';
 
@@ -19,8 +19,8 @@ const About = () => {
         eyebrow={t('About us', 'ہمارے بارے میں')}
         title={t('About the madrasa', 'مدرسے کے بارے میں')}
         lede={t(
-          'Siddique Akbar Trust opened in Your City in 2024.',
-          'صدیق اکبر ٹرسٹ 2024 میں آپ کے شہر میں قائم ہوا۔'
+          'Siddique Akbar Trust opened in Nashik in 2024.',
+          'صدیق اکبر ٹرسٹ 2024 میں ناسک میں قائم ہوا۔'
         )}
       />
 

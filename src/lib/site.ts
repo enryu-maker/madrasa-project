@@ -1,9 +1,14 @@
 // Facts that appear on more than one page live here, so they are corrected in one place.
 
 export type Pair = [en: string, ur: string];
+export type Language = 'en' | 'ur';
+
+/** Urdu pages live under /ur: localize('/about', 'ur') is '/ur/about'. */
+export const localize = (href: string, lang: Language) =>
+  lang === 'ur' && href.startsWith('/') ? `/ur${href === '/' ? '' : href}` : href;
 
 export const PHONE = '+91 8055108635';
-export const EMAIL = 'info@abubakarfoundation.org';
+export const EMAIL = 'info@siddiqueakbartrust.com';
 export const UPI_ID = 'jamiasiddhiqe@srcb';
 export const PAYEE = 'Jamia Siddhiqe Akbar Ahale Sunnat Trust';
 
@@ -77,19 +82,19 @@ export const EVENTS: { day: string; month: Pair; title: Pair; place: Pair }[] = 
     day: '26',
     month: ['January 2026', 'جنوری 2026'],
     title: ['Urs-e-Vakeel Ahmad Shah Conference', 'عرسِ وکیل احمد شاہ کانفرنس'],
-    place: ['Venue Name, Your City', 'مقام کا نام، آپ کا شہر'],
+    place: ['Nashik', 'ناسک'],
   },
   {
     day: '10',
     month: ['October 2025', 'اکتوبر 2025'],
     title: ['Jashn-e-Gous ul Wara', 'جشنِ غوث الوریٰ'],
-    place: ['Venue Name, Your City', 'مقام کا نام، آپ کا شہر'],
+    place: ['Nashik', 'ناسک'],
   },
   {
     day: '29',
     month: ['June 2025', 'جون 2025'],
     title: ['Shaheedain Conference', 'شہیدین کانفرنس'],
-    place: ['Venue Name, Your City', 'مقام کا نام، آپ کا شہر'],
+    place: ['Nashik', 'ناسک'],
   },
 ];
 
@@ -115,4 +120,13 @@ export const PHOTOS: { file: string; w: number; h: number; alt: Pair }[] = [
   { file: 'stage-3', w: 1200, h: 900, alt: STAGE },
   { file: 'decor-2', w: 900, h: 1200, alt: DECOR },
   { file: 'stage-4', w: 1200, h: 900, alt: STAGE },
+];
+
+// Shown on /our-institution and sent to search engines as FAQPage data.
+export const FAQS: { q: Pair; a: Pair }[] = [
+  { q: ['Who can enrol?', 'کون داخلہ لے سکتا ہے؟'], a: ['Anyone: children, young people and adults. Boys and girls are both admitted, and girls study in a separate department.', 'کوئی بھی: بچے، نوجوان اور بڑے۔ لڑکے اور لڑکیاں دونوں داخلہ لے سکتے ہیں، اور طالبات کا شعبہ الگ ہے۔'] },
+  { q: ['Do your teachers hold ijazah?', 'کیا آپ کے اساتذہ کے پاس اجازت ہے؟'], a: ['Yes. Every teacher holds ijazah in the subjects they teach.', 'جی ہاں۔ ہر استاد جو مضمون پڑھاتا ہے اس کی اجازت رکھتا ہے۔'] },
+  { q: ['Is there a separate section for girls?', 'کیا طالبات کا شعبہ الگ ہے؟'], a: ['Yes. Girls study in a separate department with women staff.', 'جی ہاں۔ طالبات علیحدہ شعبے میں خواتین عملے کے ساتھ پڑھتی ہیں۔'] },
+  { q: ['What courses do you offer?', 'آپ کون سے کورس پڑھاتے ہیں؟'], a: ['Hifz-ul-Quran, Tajweed, Dars-e-Nizami (the eight-year Aalim course), Hadith, Fiqh, and the Aalimah course for girls.', 'حفظ القرآن، تجوید، درسِ نظامی (آٹھ سالہ عالم کورس)، حدیث، فقہ، اور طالبات کے لیے عالمہ کورس۔'] },
+  { q: ['How do I apply?', 'درخواست کیسے دیں؟'], a: [`Fill in the form on the Admissions page, or message us on WhatsApp at ${PHONE}.`, `داخلہ کے صفحے پر فارم پُر کریں، یا واٹس ایپ پر ${PHONE} پر پیغام بھیجیں۔`] },
 ];

@@ -1,19 +1,19 @@
 "use client";
 
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import PageHeader from '@/components/PageHeader';
-import { PHONE, STATS } from '@/lib/site';
+import { FAQS, STATS } from '@/lib/site';
 
 export default function OurInstitution() {
   const { t } = useLanguage();
 
   const milestones = [
-    { year: '2024', label: t('Madrasa opened', 'مدرسہ قائم ہوا'), detail: t('The first batch started in Your City.', 'آپ کے شہر میں پہلا بیچ شروع ہوا۔') },
+    { year: '2024', label: t('Madrasa opened', 'مدرسہ قائم ہوا'), detail: t('The first batch started in Nashik.', 'ناسک میں پہلا بیچ شروع ہوا۔') },
     { year: '2024', label: t('Hifz department', 'شعبہ حفظ'), detail: t('Hifz classes began under qualified huffaz.', 'مستند حفاظ کی نگرانی میں حفظ کی کلاسیں شروع ہوئیں۔') },
     { year: '2025', label: t('Department for girls', 'شعبہ طالبات'), detail: t('A separate department for girls opened, with women teachers.', 'خواتین اساتذہ کے ساتھ طالبات کا علیحدہ شعبہ کھلا۔') },
-    { year: '2026', label: t('2,000+ students', '2,000 سے زائد طلباء'), detail: t('More than 2,000 students enrolled.', '2,000 سے زائد طلباء داخل ہو چکے ہیں۔') },
+    { year: '2026', label: t('150+ students', '150 سے زائد طلباء'), detail: t('More than 150 students now study with us.', '150 سے زائد طلباء اب ہمارے یہاں زیرِ تعلیم ہیں۔') },
   ];
 
   const approach = [
@@ -50,13 +50,6 @@ export default function OurInstitution() {
     t('Teachers know each student personally', 'اساتذہ ہر طالب علم کو ذاتی طور پر جانتے ہیں'),
   ];
 
-  const faqs = [
-    { q: t('Who can enrol?', 'کون داخلہ لے سکتا ہے؟'), a: t('Anyone: children, young people and adults. Boys and girls are both admitted, and girls study in a separate department.', 'کوئی بھی: بچے، نوجوان اور بڑے۔ لڑکے اور لڑکیاں دونوں داخلہ لے سکتے ہیں، اور طالبات کا شعبہ الگ ہے۔') },
-    { q: t('Do your teachers hold ijazah?', 'کیا آپ کے اساتذہ کے پاس اجازت ہے؟'), a: t('Yes. Every teacher holds ijazah in the subjects they teach.', 'جی ہاں۔ ہر استاد جو مضمون پڑھاتا ہے اس کی اجازت رکھتا ہے۔') },
-    { q: t('Is there a separate section for girls?', 'کیا طالبات کا شعبہ الگ ہے؟'), a: t('Yes. Girls study in a separate department with women staff.', 'جی ہاں۔ طالبات علیحدہ شعبے میں خواتین عملے کے ساتھ پڑھتی ہیں۔') },
-    { q: t('What courses do you offer?', 'آپ کون سے کورس پڑھاتے ہیں؟'), a: t('Hifz-ul-Quran, Tajweed, Dars-e-Nizami (the eight-year Aalim course), Hadith, Fiqh, and the Aalimah course for girls.', 'حفظ القرآن، تجوید، درسِ نظامی (آٹھ سالہ عالم کورس)، حدیث، فقہ، اور طالبات کے لیے عالمہ کورس۔') },
-    { q: t('How do I apply?', 'درخواست کیسے دیں؟'), a: t(`Fill in the form on the Admissions page, or message us on WhatsApp at ${PHONE}.`, `داخلہ کے صفحے پر فارم پُر کریں، یا واٹس ایپ پر ${PHONE} پر پیغام بھیجیں۔`) },
-  ];
 
   return (
     <>
@@ -87,7 +80,7 @@ export default function OurInstitution() {
             <h2 className="display d2 mt-3">{t('What kind of madrasa we are', 'ہم کس طرح کا مدرسہ ہیں')}</h2>
           </div>
           <div className="space-y-5">
-            <p>{t('Siddique Akbar Trust opened in 2024 in Your City, Your State. Students of any background can enrol.', 'صدیق اکبر ٹرسٹ 2024 میں آپ کے شہر، آپ کی ریاست میں قائم ہوا۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔')}</p>
+            <p>{t('Siddique Akbar Trust opened in 2024 in Nashik, Maharashtra. Students of any background can enrol.', 'صدیق اکبر ٹرسٹ 2024 میں ناسک، مہاراشٹر میں قائم ہوا۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔')}</p>
             <p>{t('We want students who are firm in their deen, able in their studies and well-mannered.', 'ہم چاہتے ہیں کہ ہمارے طلباء دین میں پختہ، پڑھائی میں قابل اور بااخلاق ہوں۔')}</p>
             <p>{t('Tarbiyah matters to us as much as lessons do: how a student prays, speaks and treats people.', 'ہمارے نزدیک تربیت اتنی ہی اہم ہے جتنا سبق: طالب علم نماز کیسے پڑھتا ہے، کیسے بات کرتا ہے اور لوگوں سے کیسا برتاؤ کرتا ہے۔')}</p>
           </div>
@@ -184,13 +177,13 @@ export default function OurInstitution() {
         <div className="wrap *:max-w-3xl">
           <h2 className="display d2">{t('Common questions', 'عام سوالات')}</h2>
           <div className="mt-8 border-t border-line">
-            {faqs.map(faq => (
-              <details key={faq.q} className="group border-b border-line">
+            {FAQS.map(faq => (
+              <details key={faq.q[0]} className="group border-b border-line">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-semibold [&::-webkit-details-marker]:hidden">
-                  {faq.q}
+                  {t(...faq.q)}
                   <ChevronDown className="h-5 w-5 shrink-0 text-emerald transition-transform group-open:rotate-180" aria-hidden="true" />
                 </summary>
-                <p className="pb-5 text-soft">{faq.a}</p>
+                <p className="pb-5 text-soft">{t(...faq.a)}</p>
               </details>
             ))}
           </div>

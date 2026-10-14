@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '@/components/Link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { UPI_ID, upiLink } from '@/lib/site';
 import { cn } from '@/lib/utils';
@@ -28,7 +28,7 @@ const DonateBox = ({ showBankLink = true }: { showBankLink?: boolean }) => {
           <span className="khatam h-3.5 w-3.5" aria-hidden="true" />
           <h2 className="display mt-4 text-[1.75rem]">{t('Give to the madrasa', 'مدرسے کو عطیہ دیں')}</h2>
           <p className="mx-auto mt-2 max-w-[15rem] text-[0.9375rem] rtl:max-w-[18rem] leading-snug text-soft rtl:leading-loose">
-            {t('Zakat and sadaqah accepted.', 'زکوٰۃ اور صدقات قبول ہیں۔')}
+            {t('Zakat and sadaqah accepted. Tax-deductible under 80G.', 'زکوٰۃ اور صدقات قبول ہیں۔ دفعہ 80G کے تحت ٹیکس میں چھوٹ۔')}
           </p>
         </div>
 

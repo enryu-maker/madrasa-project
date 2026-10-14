@@ -4,10 +4,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import PageHeader from '@/components/PageHeader';
 import DonateBox from '@/components/DonateBox';
 import CopyButton from '@/components/CopyButton';
-import { BANK, FUNDS, whatsapp } from '@/lib/site';
+import { BANK, FUNDS, localize, whatsapp } from '@/lib/site';
+import { SITE_URL } from '@/lib/seo';
 
 const Donation = () => {
-   const { t } = useLanguage();
+   const { t, lang } = useLanguage();
+   const appeal = t(
+      'Help a student learn the Quran at Siddique Akbar Trust, Nashik. Zakat and sadaqah accepted, 80G tax-deductible. Donate by UPI or bank:',
+      'صدیق اکبر ٹرسٹ، ناسک میں ایک طالب علم کو قرآن سیکھنے میں مدد دیں۔ زکوٰۃ اور صدقات قبول ہیں، 80G کے تحت ٹیکس میں چھوٹ۔ یو پی آئی یا بینک سے عطیہ دیں:'
+   );
 
    return (
       <>
@@ -39,17 +44,17 @@ const Donation = () => {
                   </dl>
                   <p className="mt-6 text-soft">
                      {t(
-                        'If this is Zakat, or meant for the building fund or Waqf, tell us on WhatsApp so we record it correctly.',
-                        'اگر یہ زکوٰۃ ہے، یا تعمیراتی فنڈ یا وقف کے لیے ہے، تو واٹس ایپ پر بتا دیں تاکہ ہم اسے صحیح مد میں درج کریں۔'
+                        'The trust is registered under 80G and 12A, so Indian taxpayers can claim a deduction. After you give, send us your name, PAN and the amount on WhatsApp for your 80G receipt. Tell us too if it is Zakat, or for the building fund or Waqf, so we record it correctly.',
+                        'ٹرسٹ دفعہ 80G اور 12A کے تحت رجسٹرڈ ہے، اس لیے ہندوستانی ٹیکس دہندگان ٹیکس میں چھوٹ لے سکتے ہیں۔ عطیہ دینے کے بعد 80G رسید کے لیے اپنا نام، پین (PAN) اور رقم واٹس ایپ پر بھیجیں۔ اگر یہ زکوٰۃ ہے، یا تعمیراتی فنڈ یا وقف کے لیے ہے، تو یہ بھی بتا دیں تاکہ ہم اسے صحیح مد میں درج کریں۔'
                      )}
                   </p>
                   <a
-                     href={whatsapp('Assalamu alaikum, I have made a donation to Siddique Akbar Trust.')}
+                     href={whatsapp('Assalamu alaikum, I have made a donation to Siddique Akbar Trust.\nName:\nAmount:\nPAN (for 80G receipt):\nPurpose (Zakat / Sadaqah / Building / Waqf):')}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="btn btn-green mt-5"
                   >
-                     {t('Tell us about your donation', 'اپنے عطیے کے بارے میں بتائیں')}
+                     {t('Get your 80G receipt', 'اپنی 80G رسید حاصل کریں')}
                   </a>
                </div>
             </div>
@@ -81,16 +86,28 @@ const Donation = () => {
                   <footer className="mt-4 text-white/70">{t('Prophet Muhammad ﷺ · Sahih Muslim 1631', 'حضور نبی اکرم ﷺ · صحیح مسلم 1631')}</footer>
                </blockquote>
                <p className="mt-10 text-white/80">
-                  {t('Giving from outside India, or need another way to pay?', 'ہندوستان سے باہر سے دے رہے ہیں، یا ادائیگی کا کوئی اور طریقہ چاہیے؟')}{' '}
+                  {t(
+                     'Living outside India? Indian citizens abroad can give by UPI or bank transfer from their Indian (NRE/NRO) account. We cannot yet accept money from foreign accounts or from non-Indian citizens.',
+                     'ہندوستان سے باہر رہتے ہیں؟ بیرونِ ملک مقیم ہندوستانی شہری اپنے ہندوستانی (NRE/NRO) اکاؤنٹ سے یو پی آئی یا بینک ٹرانسفر کے ذریعے عطیہ دے سکتے ہیں۔ فی الحال ہم غیر ملکی اکاؤنٹس یا غیر ہندوستانی شہریوں سے رقم قبول نہیں کر سکتے۔'
+                  )}{' '}
                   <a
                      href={whatsapp('Assalamu alaikum, I would like to donate to Siddique Akbar Trust and need some help.')}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="font-semibold text-gold underline underline-offset-4"
                   >
-                     {t('Message us first', 'پہلے ہمیں پیغام بھیجیں')}
+                     {t('Questions? Message us', 'سوال ہے؟ ہمیں پیغام بھیجیں')}
                   </a>
                </p>
+               <p className="mt-10 font-semibold">{t('Can’t give right now? Sharing helps just as much.', 'ابھی عطیہ نہیں دے سکتے؟ شیئر کرنا بھی اتنا ہی مددگار ہے۔')}</p>
+               <a
+                  href={`https://wa.me/?text=${encodeURIComponent(`${appeal} ${SITE_URL}${localize('/donation', lang)}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-gold mt-4"
+               >
+                  {t('Share on WhatsApp', 'واٹس ایپ پر شیئر کریں')}
+               </a>
             </div>
          </section>
       </>

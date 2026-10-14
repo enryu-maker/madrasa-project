@@ -1,6 +1,6 @@
 "use client";
 
-import Link from 'next/link';
+import Link from '@/components/Link';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ADDRESS, EMAIL, HOURS, PHONE, UPI_ID, whatsapp } from '@/lib/site';
@@ -76,7 +76,7 @@ const Footer = () => {
 
       <div className="border-t border-white/15">
         <p className="wrap flex flex-wrap justify-between gap-x-6 gap-y-1 py-5 pr-24 text-sm text-white/55">
-          © {new Date().getFullYear()} {t('Siddique Akbar Trust, Your City. All rights reserved.', 'صدیق اکبر ٹرسٹ، آپ کا شہر۔ جملہ حقوق محفوظ ہیں۔')}
+          © {new Date().getFullYear()} {t('Siddique Akbar Trust, Nashik. All rights reserved.', 'صدیق اکبر ٹرسٹ، ناسک۔ جملہ حقوق محفوظ ہیں۔')}
           <span dir="ltr">Made with ❤️ by <a href="https://nerdtech.in" target="_blank" rel="noopener" className="underline hover:text-white">NerdTech</a></span>
         </p>
       </div>
