@@ -10,18 +10,18 @@ import { SITE_URL } from '@/lib/seo';
 const Donation = () => {
    const { t, lang } = useLanguage();
    const appeal = t(
-      'Help a student learn the Quran at Siddique Akbar Trust, Nashik. Zakat and sadaqah accepted, 80G tax-deductible. Donate by UPI or bank:',
-      'صدیق اکبر ٹرسٹ، ناسک میں ایک طالب علم کو قرآن سیکھنے میں مدد دیں۔ زکوٰۃ اور صدقات قبول ہیں، 80G کے تحت ٹیکس میں چھوٹ۔ یو پی آئی یا بینک سے عطیہ دیں:'
+      'Help a student learn the Quran at Jamia Siddhiqe Akbar Ahale Sunnat Trust, Nashik. Zakat and sadaqah accepted, 80G tax-deductible. Donate by UPI or bank:',
+      'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ، ناسک میں ایک طالب علم کو قرآن سیکھنے میں مدد دیں۔ زکوٰۃ اور صدقات قبول ہیں، 80G کے تحت ٹیکس میں چھوٹ۔ یو پی آئی یا بینک سے عطیہ دیں:', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट, नासिक में एक छात्र को क़ुरआन सीखने में मदद करें। ज़कात और सदक़ा क़बूल है, 80G के तहत टैक्स में छूट। UPI या बैंक से दान दें:'
    );
 
    return (
       <>
          <PageHeader
-            eyebrow={t('Donate', 'عطیہ دیں')}
-            title={t('Help a student learn the Quran', 'ایک طالب علم کو قرآن سیکھنے میں مدد دیں')}
+            eyebrow={t('Donate', 'عطیہ دیں', 'दान दें')}
+            title={t('Help a student learn the Quran', 'ایک طالب علم کو قرآن سیکھنے میں مدد دیں', 'एक छात्र को क़ुरआन सीखने में मदद करें')}
             lede={t(
                'Donations keep our fees low and pay for students who cannot afford them.',
-               'عطیات سے ہماری فیس کم رہتی ہے اور ان طلباء کا خرچ پورا ہوتا ہے جو فیس نہیں دے سکتے۔'
+               'عطیات سے ہماری فیس کم رہتی ہے اور ان طلباء کا خرچ پورا ہوتا ہے جو فیس نہیں دے سکتے۔', 'दान से हमारी फ़ीस कम रहती है और उन छात्रों का ख़र्च पूरा होता है जो फ़ीस नहीं दे सकते।'
             )}
          />
 
@@ -30,7 +30,7 @@ const Donation = () => {
                <DonateBox showBankLink={false} />
 
                <div id="bank" className="scroll-mt-24">
-                  <h2 className="display d2">{t('Bank transfer', 'بینک ٹرانسفر')}</h2>
+                  <h2 className="display d2">{t('Bank transfer', 'بینک ٹرانسفر', 'बैंक ट्रांसफ़र')}</h2>
                   <dl className="mt-6 border-t border-line">
                      {BANK.map(row => (
                         <div key={row.value} className="flex items-center justify-between gap-3 border-b border-line py-2">
@@ -45,16 +45,16 @@ const Donation = () => {
                   <p className="mt-6 text-soft">
                      {t(
                         'The trust is registered under 80G and 12A, so Indian taxpayers can claim a deduction. After you give, send us your name, PAN and the amount on WhatsApp for your 80G receipt. Tell us too if it is Zakat, or for the building fund or Waqf, so we record it correctly.',
-                        'ٹرسٹ دفعہ 80G اور 12A کے تحت رجسٹرڈ ہے، اس لیے ہندوستانی ٹیکس دہندگان ٹیکس میں چھوٹ لے سکتے ہیں۔ عطیہ دینے کے بعد 80G رسید کے لیے اپنا نام، پین (PAN) اور رقم واٹس ایپ پر بھیجیں۔ اگر یہ زکوٰۃ ہے، یا تعمیراتی فنڈ یا وقف کے لیے ہے، تو یہ بھی بتا دیں تاکہ ہم اسے صحیح مد میں درج کریں۔'
+                        'ٹرسٹ دفعہ 80G اور 12A کے تحت رجسٹرڈ ہے، اس لیے ہندوستانی ٹیکس دہندگان ٹیکس میں چھوٹ لے سکتے ہیں۔ عطیہ دینے کے بعد 80G رسید کے لیے اپنا نام، پین (PAN) اور رقم واٹس ایپ پر بھیجیں۔ اگر یہ زکوٰۃ ہے، یا تعمیراتی فنڈ یا وقف کے لیے ہے، تو یہ بھی بتا دیں تاکہ ہم اسے صحیح مد میں درج کریں۔', 'ट्रस्ट धारा 80G और 12A के तहत रजिस्टर्ड है, इसलिए भारतीय टैक्सदाता टैक्स में छूट ले सकते हैं। दान देने के बाद 80G रसीद के लिए अपना नाम, PAN और रक़म व्हाट्सऐप पर भेजें। अगर यह ज़कात है, या बिल्डिंग फ़ंड या वक़्फ़ के लिए है, तो यह भी बता दें ताकि हम इसे सही मद में दर्ज करें।'
                      )}
                   </p>
                   <a
-                     href={whatsapp('Assalamu alaikum, I have made a donation to Siddique Akbar Trust.\nName:\nAmount:\nPAN (for 80G receipt):\nPurpose (Zakat / Sadaqah / Building / Waqf):')}
+                     href={whatsapp('Assalamu alaikum, I have made a donation to Jamia Siddhiqe Akbar Ahale Sunnat Trust.\nName:\nAmount:\nPAN (for 80G receipt):\nPurpose (Zakat / Sadaqah / Building / Waqf):')}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="btn btn-green mt-5"
                   >
-                     {t('Get your 80G receipt', 'اپنی 80G رسید حاصل کریں')}
+                     {t('Get your 80G receipt', 'اپنی 80G رسید حاصل کریں', 'अपनी 80G रसीद पाएँ')}
                   </a>
                </div>
             </div>
@@ -62,7 +62,7 @@ const Donation = () => {
 
          <section className="py-16 md:py-24">
             <div className="wrap">
-               <h2 className="display d2">{t('Where your money goes', 'آپ کا پیسہ کہاں جاتا ہے')}</h2>
+               <h2 className="display d2">{t('Where your money goes', 'آپ کا عطیہ کہاں خرچ ہوتا ہے', 'आपका दान कहाँ ख़र्च होता है')}</h2>
                <div className="mt-10 grid gap-8 md:grid-cols-3">
                   {FUNDS.map(f => (
                      <div key={f.title[0]} className="border-t-2 border-gold pt-5">
@@ -80,33 +80,33 @@ const Donation = () => {
                   <p className="display d2">
                      {t(
                         '“When a person dies, their deeds come to an end except for three: ongoing charity, knowledge that benefits others, and a righteous child who prays for them.”',
-                        '"جب انسان مر جاتا ہے تو اس کے عمل کا سلسلہ ختم ہو جاتا ہے سوائے تین چیزوں کے: صدقہ جاریہ، وہ علم جس سے فائدہ اٹھایا جائے، اور نیک اولاد جو اس کے لیے دعا کرے۔"'
+                        '"جب انسان مر جاتا ہے تو اس کے عمل کا سلسلہ ختم ہو جاتا ہے سوائے تین چیزوں کے: صدقۂ جاریہ، وہ علم جس سے فائدہ اٹھایا جائے، اور نیک اولاد جو اس کے لیے دعا کرے۔"', '“जब इंसान मर जाता है तो उसके अमल का सिलसिला ख़त्म हो जाता है, सिवाय तीन चीज़ों के: सदक़ा-ए-जारिया, वह इल्म जिससे फ़ायदा उठाया जाए, और नेक औलाद जो उसके लिए दुआ करे।”'
                      )}
                   </p>
-                  <footer className="mt-4 text-white/70">{t('Prophet Muhammad ﷺ · Sahih Muslim 1631', 'حضور نبی اکرم ﷺ · صحیح مسلم 1631')}</footer>
+                  <footer className="mt-4 text-white/70">{t('Prophet Muhammad ﷺ · Sahih Muslim 1631', 'حضور نبی اکرم ﷺ · صحیح مسلم 1631', 'पैग़ंबर मुहम्मद ﷺ · सहीह मुस्लिम 1631')}</footer>
                </blockquote>
                <p className="mt-10 text-white/80">
                   {t(
                      'Living outside India? Indian citizens abroad can give by UPI or bank transfer from their Indian (NRE/NRO) account. We cannot yet accept money from foreign accounts or from non-Indian citizens.',
-                     'ہندوستان سے باہر رہتے ہیں؟ بیرونِ ملک مقیم ہندوستانی شہری اپنے ہندوستانی (NRE/NRO) اکاؤنٹ سے یو پی آئی یا بینک ٹرانسفر کے ذریعے عطیہ دے سکتے ہیں۔ فی الحال ہم غیر ملکی اکاؤنٹس یا غیر ہندوستانی شہریوں سے رقم قبول نہیں کر سکتے۔'
+                     'ہندوستان سے باہر رہتے ہیں؟ بیرونِ ملک مقیم ہندوستانی شہری اپنے ہندوستانی (NRE/NRO) اکاؤنٹ سے یو پی آئی یا بینک ٹرانسفر کے ذریعے عطیہ دے سکتے ہیں۔ فی الحال ہم غیر ملکی اکاؤنٹس یا غیر ہندوستانی شہریوں سے رقم قبول نہیں کر سکتے۔', 'भारत से बाहर रहते हैं? विदेश में रहने वाले भारतीय नागरिक अपने भारतीय (NRE/NRO) खाते से UPI या बैंक ट्रांसफ़र के ज़रिए दान दे सकते हैं। फ़िलहाल हम विदेशी खातों या ग़ैर-भारतीय नागरिकों से रक़म स्वीकार नहीं कर सकते।'
                   )}{' '}
                   <a
-                     href={whatsapp('Assalamu alaikum, I would like to donate to Siddique Akbar Trust and need some help.')}
+                     href={whatsapp('Assalamu alaikum, I would like to donate to Jamia Siddhiqe Akbar Ahale Sunnat Trust and need some help.')}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="font-semibold text-gold underline underline-offset-4"
                   >
-                     {t('Questions? Message us', 'سوال ہے؟ ہمیں پیغام بھیجیں')}
+                     {t('Questions? Message us', 'سوال ہے؟ ہمیں پیغام بھیجیں', 'कोई सवाल? हमें संदेश भेजें')}
                   </a>
                </p>
-               <p className="mt-10 font-semibold">{t('Can’t give right now? Sharing helps just as much.', 'ابھی عطیہ نہیں دے سکتے؟ شیئر کرنا بھی اتنا ہی مددگار ہے۔')}</p>
+               <p className="mt-10 font-semibold">{t('Can’t give right now? Sharing helps just as much.', 'ابھی عطیہ نہیں دے سکتے؟ شیئر کرنا بھی اتنا ہی مددگار ہے۔', 'अभी दान नहीं दे सकते? शेयर करना भी उतना ही मददगार है।')}</p>
                <a
                   href={`https://wa.me/?text=${encodeURIComponent(`${appeal} ${SITE_URL}${localize('/donation', lang)}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-gold mt-4"
                >
-                  {t('Share on WhatsApp', 'واٹس ایپ پر شیئر کریں')}
+                  {t('Share on WhatsApp', 'واٹس ایپ پر شیئر کریں', 'व्हाट्सऐप पर शेयर करें')}
                </a>
             </div>
          </section>

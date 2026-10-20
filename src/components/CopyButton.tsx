@@ -10,16 +10,16 @@ const CopyButton = ({ value, label }: { value: string; label: string }) => {
   const copy = async () => {
     try {
       await navigator.clipboard.writeText(value);
-      toast.success(t('Copied', 'کاپی ہو گیا'));
+      toast.success(t('Copied', 'کاپی ہو گیا', 'कॉपी हो गया'));
     } catch {
-      toast.error(t('Could not copy. Select the text and copy it by hand.', 'کاپی نہیں ہو سکا۔ متن منتخب کر کے خود کاپی کریں۔'));
+      toast.error(t('Could not copy. Select the text and copy it by hand.', 'کاپی نہیں ہو سکا۔ متن منتخب کر کے خود کاپی کریں۔', 'कॉपी नहीं हो सका। टेक्स्ट चुनकर ख़ुद कॉपी करें।'));
     }
   };
 
   return (
     <button
       onClick={copy}
-      aria-label={`${t('Copy', 'کاپی')} ${label}`}
+      aria-label={`${t('Copy', 'کاپی کریں', 'कॉपी करें')} ${label}`}
       className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-emerald hover:bg-chalk"
     >
       <Copy className="h-4 w-4" />

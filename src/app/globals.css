@@ -102,6 +102,10 @@
     letter-spacing: 0;
   }
 
+  /* Marcellus has no Devanagari, and letter spacing breaks Devanagari conjuncts. */
+  [lang="hi"] .display { font-family: var(--font-hind), sans-serif; font-weight: 600; letter-spacing: 0; }
+  [lang="hi"] .eyebrow { letter-spacing: 0; }
+
   [dir="rtl"] .display {
     font-family: "Marcellus", var(--font-nastaliq), serif;
     line-height: 1.95;

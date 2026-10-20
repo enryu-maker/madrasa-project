@@ -12,11 +12,11 @@ const GalleryPage = () => {
   return (
     <>
       <PageHeader
-        eyebrow={t('Gallery', 'گیلری')}
-        title={t('Life at the madrasa', 'مدرسے کی زندگی')}
+        eyebrow={t('Gallery', 'گیلری', 'गैलरी')}
+        title={t('Life at the madrasa', 'مدرسے کی زندگی', 'मदरसे की ज़िंदगी')}
         lede={t(
           'Classes, celebrations and gatherings.',
-          'کلاسیں، تقریبات اور اجتماعات۔'
+          'کلاسیں، تقریبات اور اجتماعات۔', 'क्लासें, जश्न और इज्तिमा।'
         )}
       />
 
@@ -38,7 +38,7 @@ const GalleryPage = () => {
 
       <section className="bg-chalk py-16 md:py-24">
         <div className="wrap">
-          <h2 className="display d2 text-center">{t('Gatherings we have hosted', 'ہمارے منعقد کردہ اجتماعات')}</h2>
+          <h2 className="display d2 text-center">{t('Gatherings we have hosted', 'ہمارے منعقد کردہ اجتماعات', 'हमारे आयोजित इज्तिमा')}</h2>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             {EVENTS.map(e => <EventCard key={e.title[0]} event={e} />)}
           </div>
