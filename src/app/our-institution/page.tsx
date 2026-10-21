@@ -10,10 +10,10 @@ export default function OurInstitution() {
   const { t } = useLanguage();
 
   const milestones = [
-    { year: '2024', label: t('Madrasa opened', 'مدرسہ قائم ہوا', 'मदरसा क़ायम हुआ'), detail: t('The first batch started in Nashik.', 'ناسک میں پہلا بیچ شروع ہوا۔', 'नासिक में पहला बैच शुरू हुआ।') },
-    { year: '2024', label: t('Hifz department', 'شعبۂ حفظ', 'हिफ़्ज़ विभाग'), detail: t('Hifz classes began under qualified huffaz.', 'مستند حفاظ کی نگرانی میں حفظ کی کلاسیں شروع ہوئیں۔', 'मुस्तनद हुफ़्फ़ाज़ की निगरानी में हिफ़्ज़ की क्लासें शुरू हुईं।') },
-    { year: '2025', label: t('150+ students', '150 سے زائد طلباء', '150 से ज़्यादा छात्र'), detail: t('More than 150 students now study with us.', '150 سے زائد طلباء اب ہمارے یہاں زیرِ تعلیم ہیں۔', '150 से ज़्यादा छात्र अब हमारे यहाँ पढ़ रहे हैं।') },
-    { year: '2026', label: t('Department for girls (coming soon)', 'شعبۂ طالبات (جلد آرہا ہے)', 'छात्राओं का विभाग (जल्द आ रहा है)'), detail: t('A separate department for girls, with women teachers, opens soon.', 'معلمات کے ساتھ طالبات کا علیحدہ شعبہ جلد کھلے گا۔', 'महिला उस्तानियों के साथ छात्राओं का अलग विभाग जल्द खुलेगा।') },
+    { year: t('2024', '۲۰۲۴', '२०२४'), label: t('Madrasa opened', 'مدرسہ قائم ہوا', 'मदरसा क़ायम हुआ'), detail: t('The first batch started in Nashik.', 'ناسک میں پہلا بیچ شروع ہوا۔', 'नासिक में पहला बैच शुरू हुआ।') },
+    { year: t('2024', '۲۰۲۴', '२०२४'), label: t('Hifz department', 'شعبۂ حفظ', 'हिफ़्ज़ विभाग'), detail: t('Hifz classes began under qualified huffaz.', 'مستند حفاظ کی نگرانی میں حفظ کی کلاسیں شروع ہوئیں۔', 'मुस्तनद हुफ़्फ़ाज़ की निगरानी में हिफ़्ज़ की क्लासें शुरू हुईं।') },
+    { year: t('2025', '۲۰۲۵', '२०२५'), label: t('150+ students', '۱۵۰ سے زائد طلباء', '१५० से ज़्यादा छात्र'), detail: t('More than 150 students now study with us.', '۱۵۰ سے زائد طلباء اب ہمارے یہاں زیرِ تعلیم ہیں۔', '१५० से ज़्यादा छात्र अब हमारे यहाँ पढ़ रहे हैं।') },
+    { year: t('2026', '۲۰۲۶', '२०۲۶'), label: t('Department for girls (coming soon)', 'شعبۂ طالبات (جلد آرہا ہے)', 'छात्राओं का विभाग (जल्द आ रहा है)'), detail: t('A separate department for girls, with women teachers, opens soon.', 'معلمات کے ساتھ طالبات کا علیحدہ شعبہ جلد کھلے گا۔', 'महिला उस्तानियों کے साथ छात्राओं का अलग विभाग जल्द खुलेगा।') },
   ];
 
   const approach = [
@@ -65,8 +65,8 @@ export default function OurInstitution() {
       <section className="border-b border-line bg-chalk">
         <div className="wrap grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-4">
           {STATS.map(s => (
-            <p key={s.value}>
-              <span className="display block text-4xl text-emerald rtl:text-right" dir="ltr">{s.value}</span>
+            <p key={s.value[0]}>
+              <span className="display block text-4xl text-emerald rtl:text-right">{t(...s.value)}</span>
               <span className="text-soft">{t(...s.label)}</span>
             </p>
           ))}
@@ -80,7 +80,7 @@ export default function OurInstitution() {
             <h2 className="display d2 mt-3">{t('What kind of madrasa we are', 'ہمارا مدرسہ کیسا ہے', 'हमारा मदरसा कैसा है')}</h2>
           </div>
           <div className="space-y-5">
-            <p>{t('Jamia Siddhiqe Akbar Ahale Sunnat Trust opened in 2024 in Nashik, Maharashtra. Students of any background can enrol.', 'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ 2024 میں ناسک، مہاراشٹر میں قائم ہوا۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट 2024 में नासिक, महाराष्ट्र में क़ायम हुआ। हर पृष्ठभूमि के छात्र दाख़िला ले सकते हैं।')}</p>
+            <p>{t('Jamia Siddhiqe Akbar Ahale Sunnat Trust opened in 2024 in Nashik, Maharashtra. Students of any background can enrol.', 'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ ۲۰۲۴ میں ناسک، مہاراشٹر میں قائم ہوا۔ ہر پس منظر کے طلباء داخلہ لے سکتے ہیں۔', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट २०२४ में नासिक, महाराष्ट्र में क़ायम हुआ। हर पृष्ठभूमि के छात्र दाख़िला ले सकते हैं।')}</p>
             <p>{t('We want students who are firm in their deen, able in their studies and well-mannered.', 'ہم چاہتے ہیں کہ ہمارے طلباء دین میں پختہ، پڑھائی میں قابل اور بااخلاق ہوں۔', 'हम चाहते हैं कि हमारे छात्र दीन में पक्के, पढ़ाई में क़ाबिल और बा-अख़लाक़ हों।')}</p>
             <p>{t('Tarbiyah matters to us as much as lessons do: how a student prays, speaks and treats people.', 'ہمارے نزدیک تربیت اتنی ہی اہم ہے جتنا سبق: طالب علم نماز کیسے پڑھتا ہے، کیسے بات کرتا ہے اور لوگوں سے کیسا برتاؤ کرتا ہے۔', 'हमारे लिए तरबियत उतनी ही अहम है जितना सबक़: छात्र नमाज़ कैसे पढ़ता है, कैसे बात करता है और लोगों से कैसा बर्ताव करता है।')}</p>
           </div>

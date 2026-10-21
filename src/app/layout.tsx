@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { Amiri, Hind, Marcellus, Noto_Nastaliq_Urdu } from 'next/font/google';
+import { Amiri, Hind, Marcellus, Noto_Nastaliq_Urdu, Noto_Sans_Arabic } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -13,6 +13,7 @@ const hind = Hind({ variable: '--font-hind', subsets: ['latin', 'devanagari'], w
 const amiri = Amiri({ variable: '--font-amiri', subsets: ['arabic'], weight: '400' });
 // Only needed once a visitor switches to Urdu, so it is not preloaded.
 const nastaliq = Noto_Nastaliq_Urdu({ variable: '--font-nastaliq', subsets: ['arabic'], preload: false });
+const urduFont = Noto_Sans_Arabic({ variable: '--font-urdu', subsets: ['arabic'], weight: ['400', '500', '600', '700', '800'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${marcellus.variable} ${hind.variable} ${amiri.variable} ${nastaliq.variable} h-full`}>
+    <html lang="en" suppressHydrationWarning className={`${marcellus.variable} ${hind.variable} ${amiri.variable} ${nastaliq.variable} ${urduFont.variable} h-full`}>
       <body className="min-h-full">
         <script type="application/ld+json" dangerouslySetInnerHTML={ldJson([ORGANIZATION, WEBSITE])} />
         <Providers>

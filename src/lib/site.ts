@@ -19,7 +19,7 @@ export const ADDRESS: Pair = [
   'Ashrafi Chowk, Sanjiv Nagar, Link Road, Nashik',
   'اشرفی چوک، سنجیو نگر، لنک روڈ، ناسک', 'अशरफ़ी चौक, संजीव नगर, लिंक रोड, नासिक',
 ];
-export const HOURS: Pair = ['Monday – Saturday, 9:00 AM – 6:00 PM', 'پیر تا ہفتہ، صبح 9 تا شام 6', 'सोमवार से शनिवार, सुबह 9 से शाम 6 बजे तक'];
+export const HOURS: Pair = ['Monday – Saturday, 9:00 AM – 6:00 PM', 'پیر تا ہفتہ، صبح ۹ تا شام ۶', 'सोमवार से शनिवार, सुबह ९ से शाम ६ बजे तक'];
 
 export const whatsapp = (text?: string) =>
   `https://wa.me/${PHONE.replace(/\D/g, '')}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
@@ -36,10 +36,10 @@ export const BANK: { label: Pair; value: string }[] = [
   { label: ['IFSC code', 'آئی ایف ایس سی کوڈ', 'IFSC कोड'], value: 'SRCB0000493' },
 ];
 
-export const STATS: { value: string; label: Pair }[] = [
-  { value: '150+', label: ['Active students', 'زیرِ تعلیم طلباء', 'सक्रिय छात्र'] },
-  { value: '5+', label: ['Qualified teachers', 'مستند اساتذہ', 'योग्य उस्ताद'] },
-  { value: '15+', label: ['Programs', 'پروگرام', 'कोर्स'] },
+export const STATS: { value: Pair; label: Pair }[] = [
+  { value: ['150+', '۱۵۰+', '१५०+'], label: ['Active students', 'زیرِ تعلیم طلباء', 'सक्रिय छात्र'] },
+  { value: ['5+', '۵+', '५+'], label: ['Qualified teachers', 'مستند اساتذہ', 'योग्य उस्ताद'] },
+  { value: ['15+', '۱۵+', '१५+'], label: ['Programs', 'پروگرام', 'कोर्स'] },
 ];
 
 export const FUNDS: { title: Pair; desc: Pair }[] = [
@@ -80,22 +80,22 @@ export const PROGRAMS: { title: Pair; desc: Pair }[] = [
   },
 ];
 
-export const EVENTS: { day: string; month: Pair; title: Pair; place: Pair }[] = [
+export const EVENTS: { day: Pair; month: Pair; title: Pair; place: Pair }[] = [
   {
-    day: '26',
-    month: ['January 2026', 'جنوری 2026', 'जनवरी 2026'],
+    day: ['26', '۲۶', '२६'],
+    month: ['January 2026', 'جنوری ۲۰۲۶', 'जनवरी २०२६'],
     title: ['Urs-e-Vakeel Ahmad Shah Conference', 'عرسِ وکیل احمد شاہ کانفرنس', 'उर्स-ए-वकील अहमद शाह कॉन्फ़्रेंस'],
     place: ['Nashik', 'ناسک', 'नासिक'],
   },
   {
-    day: '10',
-    month: ['October 2025', 'اکتوبر 2025', 'अक्टूबर 2025'],
+    day: ['10', '۱۰', '१०'],
+    month: ['October 2025', 'اکتوبر ۲۰۲۵', 'अक्टूबर २०२५'],
     title: ['Jashn-e-Gous ul Wara', 'جشنِ غوث الوریٰ', 'जश्न-ए-ग़ौस-उल-वरा'],
     place: ['Nashik', 'ناسک', 'नासिक'],
   },
   {
-    day: '29',
-    month: ['June 2025', 'جون 2025', 'जून 2025'],
+    day: ['29', '۲۹', '२९'],
+    month: ['June 2025', 'جون ۲۰۲۵', 'जून २०२५'],
     title: ['Shaheedain Conference', 'شہیدین کانفرنس', 'शहीदैन कॉन्फ़्रेंस'],
     place: ['Nashik', 'ناسک', 'नासिक'],
   },
@@ -127,9 +127,9 @@ export const PHOTOS: { file: string; w: number; h: number; alt: Pair }[] = [
 
 // Shown on /our-institution and sent to search engines as FAQPage data.
 export const FAQS: { q: Pair; a: Pair }[] = [
-  { q: ['What is Jamia Siddhiqe Akbar Ahale Sunnat Trust?', 'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ کیا ہے؟', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट क्या है?'], a: ['Jamia Siddhiqe Akbar Ahale Sunnat Trust is a madrasa in Nashik, Maharashtra, opened in 2024. It teaches Quran, Hifz, Tajweed and Dars-e-Nizami to 150+ students at low fees, funded by Zakat and Sadaqah.', 'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ ناسک، مہاراشٹر کا ایک مدرسہ ہے جو 2024 میں قائم ہوا۔ یہاں 150 سے زائد طلباء کو کم فیس میں قرآن، حفظ، تجوید اور درسِ نظامی پڑھایا جاتا ہے، جس کا خرچ زکوٰۃ اور صدقات سے پورا ہوتا ہے۔', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट नासिक, महाराष्ट्र का एक मदरसा है जो 2024 में शुरू हुआ। यहाँ 150 से ज़्यादा छात्रों को कम फ़ीस में क़ुरआन, हिफ़्ज़, तजवीद और दर्स-ए-निज़ामी पढ़ाया जाता है, जिसका ख़र्च ज़कात और सदक़े से चलता है।'] },
+  { q: ['What is Jamia Siddhiqe Akbar Ahale Sunnat Trust?', 'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ کیا ہے؟', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट क्या है?'], a: ['Jamia Siddhiqe Akbar Ahale Sunnat Trust is a madrasa in Nashik, Maharashtra, opened in 2024. It teaches Quran, Hifz, Tajweed and Dars-e-Nizami to 150+ students at low fees, funded by Zakat and Sadaqah.', 'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ ناسک، مہاراشٹر کا ایک مدرسہ ہے جو ۲۰۲۴ میں قائم ہوا۔ یہاں ۱۵۰ سے زائد طلباء کو کم فیس میں قرآن، حفظ، تجوید اور درسِ نظامی پڑھایا جاتا ہے، جس کا خرچ زکوٰۃ اور صدقات سے پورا ہوتا ہے۔', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट नासिक, महाराष्ट्र का एक मदरसा है जो २०२४ में शुरू हुआ। यहाँ १५० से ज़्यादा छात्रों को कम फ़ीस में क़ुरआन, हिफ़्ज़, तजवीद और दर्स-ए-निज़ामी पढ़ाया जाता है, जिसका ख़र्च ज़कात और सदक़े से चलता है।'] },
   { q: ['Where is the madrasa, and when is it open?', 'مدرسہ کہاں ہے، اور کب کھلا رہتا ہے؟', 'मदरसा कहाँ है, और कब खुला रहता है?'], a: [`${ADDRESS[0]}, Maharashtra. The office is open ${HOURS[0]}. Call or WhatsApp ${PHONE}.`, `${ADDRESS[1]}، مہاراشٹر۔ دفتر ${HOURS[1]} کھلا رہتا ہے۔ کال یا واٹس ایپ کریں: ${PHONE}`, `${ADDRESS[2]}, महाराष्ट्र। दफ़्तर ${HOURS[2]} खुला रहता है। कॉल या व्हाट्सऐप करें: ${PHONE}`] },
-  { q: ['Can I give Zakat, and is my donation tax-deductible?', 'کیا میں زکوٰۃ دے سکتا ہوں، اور کیا عطیے پر ٹیکس میں چھوٹ ملتی ہے؟', 'क्या मैं ज़कात दे सकता हूँ, और क्या दान पर टैक्स में छूट मिलती है?'], a: [`Yes. Zakat goes to deserving students and their teachers. The trust is registered under 80G and 12A, so Indian taxpayers can claim a deduction. Give by UPI (${UPI_ID}) or bank transfer, then send your name, PAN and amount on WhatsApp for the receipt.`, `جی ہاں۔ زکوٰۃ مستحق طلباء اور ان کے اساتذہ پر خرچ ہوتی ہے۔ ٹرسٹ 80G اور 12A کے تحت رجسٹرڈ ہے، اس لیے ہندوستانی ٹیکس دہندگان چھوٹ لے سکتے ہیں۔ یو پی آئی (${UPI_ID}) یا بینک سے عطیہ دیں، پھر رسید کے لیے اپنا نام، پین اور رقم واٹس ایپ کریں۔`, `जी हाँ। ज़कात ज़रूरतमंद छात्रों और उनके उस्तादों पर ख़र्च होती है। ट्रस्ट 80G और 12A के तहत रजिस्टर्ड है, इसलिए भारतीय करदाता छूट ले सकते हैं। UPI (${UPI_ID}) या बैंक से दान दें, फिर रसीद के लिए अपना नाम, PAN और रक़म व्हाट्सऐप करें।`] },
+  { q: ['Can I give Zakat, and is my donation tax-deductible?', 'کیا میں زکوٰۃ دے سکتا ہوں، اور کیا عطیے پر ٹیکس میں چھوٹ ملتی ہے؟', 'क्या मैं ज़कात दे सकता हूँ, और क्या दान पर टैक्स में छूट मिलती है?'], a: [`Yes. Zakat goes to deserving students and their teachers. The trust is registered under 80G and 12A, so Indian taxpayers can claim a deduction. Give by UPI (${UPI_ID}) or bank transfer, then send your name, PAN and amount on WhatsApp for the receipt.`, `جی ہاں۔ زکوٰۃ مستحق طلباء اور ان کے اساتذہ پر خرچ ہوتی ہے۔ ٹرسٹ دفعہ ۸۰ جی اور ۱۲ اے کے تحت رجسٹرڈ ہے، اس لیے ہندوستانی ٹیکس دہندگان چھوٹ لے سکتے ہیں۔ یو پی آئی (${UPI_ID}) یا بینک سے عطیہ دیں، پھر رسید کے لیے اپنا نام، پین اور رقم واٹس ایپ کریں۔`, `जी हाँ। ज़कात ज़रूरतमंद छात्रों और उनके उस्तादों पर ख़र्च होती है। ट्रस्ट धारा ८०जी और १२ए के तहत रजिस्टर्ड है, इसलिए भारतीय करदाता छूट ले सकते हैं। UPI (${UPI_ID}) या बैंक से दान दें, फिर रसीद के लिए अपना नाम, PAN और रक़म व्हाट्सऐप करें।`] },
   { q: ['Who can enrol?', 'کون داخلہ لے سکتا ہے؟', 'कौन दाख़िला ले सकता है?'], a: ['Anyone: children, young people and adults. Boys are admitted now; a separate department for girls is opening soon.', 'کوئی بھی: بچے، نوجوان اور بڑے۔ ابھی لڑکوں کا داخلہ ہوتا ہے؛ طالبات کا علیحدہ شعبہ جلد کھلے گا۔', 'कोई भी: बच्चे, नौजवान और बड़े। अभी लड़कों का दाख़िला होता है; छात्राओं का अलग विभाग जल्द खुलेगा।'] },
   { q: ['Do your teachers hold ijazah?', 'کیا آپ کے اساتذہ سندِ اجازت رکھتے ہیں؟', 'क्या आपके उस्तादों के पास इजाज़त (सनद) है?'], a: ['Yes. Every teacher holds ijazah in the subjects they teach.', 'جی ہاں۔ ہر استاد جو مضمون پڑھاتا ہے اس کی سندِ اجازت رکھتا ہے۔', 'जी हाँ। हर उस्ताद जो विषय पढ़ाता है, उसकी इजाज़त रखता है।'] },
   { q: ['Is there a separate section for girls?', 'کیا طالبات کا شعبہ الگ ہے؟', 'क्या छात्राओं का विभाग अलग है?'], a: ['A separate department for girls, with women staff, is coming soon.', 'معلمات کے زیرِ نگرانی طالبات کا علیحدہ شعبہ جلد آرہا ہے۔', 'महिला स्टाफ़ के साथ छात्राओं का अलग विभाग जल्द आ रहा है।'] },

@@ -35,7 +35,7 @@ const AdmissionPage = () => {
   return (
     <>
       <PageHeader
-        eyebrow={t('Enrolling for 2026', 'داخلے برائے 2026', 'दाख़िले 2026 के लिए')}
+        eyebrow={t('Enrolling for 2026', 'داخلے برائے ۲۰۲۶', 'दाख़िले २०२६ के लिए')}
         title={t('Admissions', 'داخلہ', 'दाख़िला')}
         lede={t(
           'For children, young people and adults. Fees are low; ask us what the fee is for your course.',
@@ -50,7 +50,7 @@ const AdmissionPage = () => {
             <ol className="mt-8 space-y-6">
               {steps.map((step, i) => (
                 <li key={step.title} className="flex gap-4">
-                  <span className="display text-2xl text-emerald" dir="ltr">{i + 1}</span>
+                  <span className="display text-2xl text-emerald">{t(String(i + 1), ['۱', '۲', '۳', '۴'][i] || String(i + 1), ['१', '२', '३', '४'][i] || String(i + 1))}</span>
                   <div>
                     <h3 className="font-semibold">{step.title}</h3>
                     <p className="text-soft">{step.desc}</p>

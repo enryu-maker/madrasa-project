@@ -28,7 +28,7 @@ const DonateBox = ({ showBankLink = true }: { showBankLink?: boolean }) => {
           <span className="khatam h-3.5 w-3.5" aria-hidden="true" />
           <h2 className="display mt-4 text-[1.75rem]">{t('Give to the madrasa', 'مدرسے کو عطیہ دیں', 'मदरसे को दान दें')}</h2>
           <p className="mx-auto mt-2 max-w-[15rem] text-[0.9375rem] rtl:max-w-[18rem] leading-snug text-soft rtl:leading-loose">
-            {t('Zakat and sadaqah accepted. Tax-deductible under 80G.', 'زکوٰۃ اور صدقات قبول ہیں۔ دفعہ 80G کے تحت ٹیکس میں چھوٹ۔', 'ज़कात और सदक़ा क़बूल है। धारा 80G के तहत टैक्स में छूट।')}
+            {t('Zakat and sadaqah accepted. Tax-deductible under 80G.', 'زکوٰۃ اور صدقات قبول ہیں۔ دفعہ ۸۰ جی کے تحت ٹیکس میں چھوٹ۔', 'ज़कात और सदक़ा क़बूल है। धारा ८०जी के तहत टैक्स में छूट।')}
           </p>
         </div>
 

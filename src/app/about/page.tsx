@@ -20,18 +20,18 @@ const About = () => {
         title={t('About the madrasa', 'مدرسے کے بارے میں', 'मदरसे के बारे में')}
         lede={t(
           'Jamia Siddhiqe Akbar Ahale Sunnat Trust opened in Nashik in 2024.',
-          'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ 2024 میں ناسک میں قائم ہوا۔', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट 2024 में नासिक में क़ायम हुआ।'
+          'جامعہ صدیقِ اکبر اہلِ سنت ٹرسٹ ۲۰۲۴ میں ناسک میں قائم ہوا۔', 'जामिया सिद्दीक़े अकबर अहले सुन्नत ट्रस्ट २०२४ में नासिक में क़ायम हुआ।'
         )}
       />
 
       <section className="py-16 md:py-24">
         <div className="wrap grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
-            <p className="eyebrow text-emerald">{t('Since 2024', '2024 سے', '2024 से')}</p>
+            <p className="eyebrow text-emerald">{t('Since 2024', '۲۰۲۴ سے', '२०२४ से')}</p>
             <h2 className="display d2 mt-3">{t('How we started', 'ہماری ابتدا', 'हमारी शुरुआत')}</h2>
           </div>
           <div className="space-y-5">
-            <p>{t('We opened in 2024 to teach the Islamic sciences the traditional way, while making sure our students can also manage in the world outside the madrasa.', 'ہم نے 2024 میں آغاز کیا تاکہ دینی علوم روایتی طریقے سے پڑھائے جائیں، اور ساتھ ہی طلباء مدرسے سے باہر کی دنیا میں بھی اپنے پاؤں پر کھڑے ہو سکیں۔', 'हमने 2024 में शुरुआत की ताकि दीनी इल्म पारंपरिक तरीक़े से पढ़ाया जाए, और साथ ही छात्र मदरसे के बाहर की दुनिया में भी अपने पैरों पर खड़े हो सकें।')}</p>
+            <p>{t('We opened in 2024 to teach the Islamic sciences the traditional way, while making sure our students can also manage in the world outside the madrasa.', 'ہم نے ۲۰۲۴ میں آغاز کیا تاکہ دینی علوم روایتی طریقے سے پڑھائے جائیں، اور ساتھ ہی طلباء مدرسے سے باہر کی دنیا میں بھی اپنے پاؤں پر کھڑے ہو سکیں۔', 'हमने २०२४ में शुरुआत की ताकि दीनी इल्म पारंपरिक तरीक़े से पढ़ाया जाए, और साथ ही छात्र मदरसे के बाहर की दुनिया में भी अपने पैरों पर खड़े हो सकें।')}</p>
             <p>{t('Students come to us from all kinds of families. We have a Hifz department and the Dars-e-Nizami course, and a separate department for girls is opening soon.', 'ہمارے پاس ہر طرح کے گھرانوں کے طلباء آتے ہیں۔ یہاں شعبۂ حفظ اور درسِ نظامی ہے، اور طالبات کا علیحدہ شعبہ جلد کھلے گا۔', 'हमारे यहाँ हर तरह के घरानों से छात्र आते हैं। यहाँ हिफ़्ज़ विभाग और दर्स-ए-निज़ामी है, और छात्राओं का अलग विभाग जल्द खुलेगा।')}</p>
             <p>{t('Our teachers hold ijazah in what they teach.', 'ہمارے اساتذہ جو مضامین پڑھاتے ہیں ان کی سندِ اجازت رکھتے ہیں۔', 'हमारे उस्ताद जो पढ़ाते हैं, उसकी इजाज़त (सनद) रखते हैं।')}</p>
           </div>
