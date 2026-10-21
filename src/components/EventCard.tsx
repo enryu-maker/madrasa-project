@@ -1,10 +1,13 @@
 "use client";
 
-import { useLanguage } from '@/contexts/LanguageContext';
-import type { EVENTS } from '@/lib/site';
+import { useLanguage } from "@/contexts/LanguageContext";
+import type { EVENTS } from "@/lib/site";
 
-// Drawn in the site's own style instead of showing the printed poster.
-const EventCard = ({ event }: { event: (typeof EVENTS)[number] }) => {
+interface EventCardProps {
+  event: (typeof EVENTS)[number];
+}
+
+export default function EventCard({ event }: EventCardProps) {
   const { t } = useLanguage();
 
   return (
@@ -18,6 +21,4 @@ const EventCard = ({ event }: { event: (typeof EVENTS)[number] }) => {
       <p className="mt-3 text-[0.9375rem] text-white/70">{t(...event.place)}</p>
     </article>
   );
-};
-
-export default EventCard;
+}

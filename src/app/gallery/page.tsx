@@ -1,23 +1,20 @@
 "use client";
 
-import Image from 'next/image';
-import { useLanguage } from '@/contexts/LanguageContext';
-import PageHeader from '@/components/PageHeader';
-import EventCard from '@/components/EventCard';
-import { EVENTS, PHOTOS } from '@/lib/site';
+import Image from "next/image";
+import PageHeader from "@/components/PageHeader";
+import EventCard from "@/components/EventCard";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { EVENTS, PHOTOS } from "@/lib/site";
 
-const GalleryPage = () => {
+export default function GalleryPage() {
   const { t } = useLanguage();
 
   return (
     <>
       <PageHeader
-        eyebrow={t('Gallery', 'گیلری', 'गैलरी')}
-        title={t('Life at the madrasa', 'مدرسے کی زندگی', 'मदरसे की ज़िंदगी')}
-        lede={t(
-          'Classes, celebrations and gatherings.',
-          'کلاسیں، تقریبات اور اجتماعات۔', 'क्लासें, जश्न और इज्तिमा।'
-        )}
+        eyebrow={t("Gallery", "گیلری", "गैलरी")}
+        title={t("Life at the madrasa", "مدرسے کی زندگی", "मदरसे की ज़िंदगी")}
+        lede={t("Classes, celebrations and gatherings.", "کلاسیں، تقریبات اور اجتماعات۔", "क्लासें, जश्न और इज्तिमा।")}
       />
 
       <section className="py-16 md:py-24">
@@ -38,14 +35,16 @@ const GalleryPage = () => {
 
       <section className="bg-chalk py-16 md:py-24">
         <div className="wrap">
-          <h2 className="display d2 text-center">{t('Gatherings we have hosted', 'ہمارے منعقد کردہ اجتماعات', 'हमारे आयोजित इज्तिमा')}</h2>
+          <h2 className="display d2 text-center">
+            {t("Gatherings we have hosted", "ہمارے منعقد کردہ اجتماعات", "हमारे आयोजित इज्तिमा")}
+          </h2>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {EVENTS.map(e => <EventCard key={e.title[0]} event={e} />)}
+            {EVENTS.map(e => (
+              <EventCard key={e.title[0]} event={e} />
+            ))}
           </div>
         </div>
       </section>
     </>
   );
-};
-
-export default GalleryPage;
+}

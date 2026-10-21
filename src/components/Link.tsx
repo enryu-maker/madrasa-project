@@ -1,12 +1,15 @@
 "use client";
 
-import NextLink from 'next/link';
-import type { ComponentProps } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
-import { localize } from '@/lib/site';
+import NextLink from "next/link";
+import type { ComponentProps } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { localize } from "@/lib/site";
 
-/** next/link that keeps Urdu readers on /ur pages. Write hrefs as the English path. */
-export default function Link({ href, ...props }: ComponentProps<typeof NextLink> & { href: string }) {
+interface LinkProps extends ComponentProps<typeof NextLink> {
+  href: string;
+}
+
+export default function Link({ href, ...props }: LinkProps) {
   const { lang } = useLanguage();
   return <NextLink href={localize(href, lang)} {...props} />;
 }
